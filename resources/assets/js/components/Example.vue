@@ -15,9 +15,21 @@
 </template>
 
 <script>
+    console.log('Webpacked Assets.');
     export default {
+        data() {
+            return {
+              greeting: 'Hello'
+            }
+        },
+        ready() {
+            console.log('Component Mounted.')
+        },
+        created() {
+            console.log('Component Created.')
+        },
         mounted() {
-            console.log('Component mounted.')
+            console.log('Component Mounted.')
         }
     }
 </script>
