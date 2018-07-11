@@ -5,5 +5,78 @@
 // Variables
 @import "variables";
 
-// Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+// Bootstrap - updated to 4.4.1
+@import "node_modules/bootstrap/scss/bootstrap";
+
+// Font Awesome - added bc its fun
+@import "node_modules/font-awesome/scss/font-awesome";
+
+/*
+ * Custom Additions - Jon Cable
+ */
+
+// fix the max width
+.container {
+  max-width: 960px;
+}
+
+// fix for responsive menu
+.collapse.in{
+  display:block !important;
+  float: left;
+  width: 100%;
+}
+.menu-btn.outline {
+  outline: none !important;
+  background: none;
+  padding: 3px 5px;
+}
+.menu-btn-primary.outline {
+  border: 1px solid #fefefe;
+  color: #999999;
+}
+.menu-btn-primary.outline:hover, .btn-primary.outline:focus, .btn-primary.outline:active, .btn-primary.outline.active, .open > .dropdown-toggle.btn-primary {
+  color: #fefefe;
+  border-color: #999999;
+}
+.menu-btn-primary.outline:active, .btn-primary.outline.active {
+  border-color: #fefefe;
+  color: #fefefe;
+  box-shadow: none;
+}
+
+/*
+ * Custom translucent site header
+ */
+
+.site-header {
+  background-color: rgba(0, 0, 0, .85);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+.site-header a {
+  color: #999;
+  transition: ease-in-out color .15s;
+}
+.site-header a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/*
+ * Custom sticky footer
+ */
+
+.site-footer {
+  background-color: rgba(0, 0, 0, .85);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+.site-footer a {
+  color: #999;
+  transition: ease-in-out color .15s;
+}
+.site-footer a:hover {
+  color: #fff;
+  text-decoration: none;
+}

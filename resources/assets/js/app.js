@@ -5,9 +5,11 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+// updated to v4.4.1
 require('./bootstrap');
 
 window.Vue = require('vue');
+window.Popper = require('popper.js').default;
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
