@@ -20,6 +20,12 @@
   max-width: 960px;
 }
 
+// constrain the logo
+.logo {
+  max-height: 30px;
+  padding: 0;
+}
+
 // fix for responsive menu
 .collapse.in{
   display:block !important;

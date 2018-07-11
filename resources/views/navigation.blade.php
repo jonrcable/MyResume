@@ -2,7 +2,7 @@
 
     <div class="container justify-content-between">
 
-        <a class="navbar-brand" href="#">Jon Cable</a>
+        <a class="navbar-brand" href="#"><img class="logo" src="{{ asset('media/logo.png') }}"></a>
         <button class="menu-btn menu-btn-primary btn-sm outline navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fa fa-navicon"></i>
         </button>
