@@ -4,14 +4,19 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="My Simple Bootstrap Template">
+    <meta name="description" content="@yield('meta-description')">
+    <meta name="keywords" content="@yield('meta-keywords')">
+    <meta name="robots" content="@yield('meta-robots')">
     <meta name="author" content="Jon Cable">
+    <meta name="copyright" content="JonCable.com">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title') - Portfolio Jon Cable</title>
+    <title>@yield('page-title') - Portfolio Jon Cable</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+
+    <!-- Mixed Styles -->
     <link rel="stylesheet" href="{{ mix('css/app.css') }}" />
 
 </head>
@@ -23,7 +28,7 @@
 
     <main role="main">
 
-        @yield('content')
+        @yield('page-content')
 
     </main>
 
@@ -33,7 +38,7 @@
 
 </div>
 
-<!-- Scripts -->
+<!-- Mixed Scripts -->
 <script type="text/javascript" src="{{ mix('js/app.js') }}"></script>
 
 </body>

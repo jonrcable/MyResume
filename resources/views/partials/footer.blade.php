@@ -6,7 +6,9 @@
 
             <!-- Grid column -->
             <div class="col-sm-6 mb-2">
-                <span class="text-muted">Thanks For Visiting.</span>
+
+                @yield('footer-msg')
+
             </div>
 
             <!-- Grid column -->

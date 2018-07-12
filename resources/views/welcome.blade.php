@@ -1,10 +1,12 @@
 @extends('layouts.app')
 
-@section('title')
-    Welcome
-@endsection
+@section('meta-robots', 'index, follow')
+@section('meta-description', 'Explore my world as a technical professional and please let me know if you have any questions.')
+@section('meta-keywords', 'Jon Cable, Resume, Portfolio, Full Stack, Open Source, Developer, Austin, Texas')
 
-@section('content')
+@section('page-title', 'Welcome')
+
+@section('page-content')
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
         <div class="container">
@@ -37,4 +39,10 @@
         <hr>
 
     </div> <!-- /container -->
+@endsection
+
+@section('footer-msg')
+    <span class="text-muted">
+        Thanks For Visiting.
+    </span>
 @endsection
