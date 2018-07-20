@@ -11,6 +11,10 @@ require('./bootstrap');
 window.Vue = require('vue');
 window.Popper = require('popper.js').default;
 
+// additional NPM components
+var VueTyperPlugin = require('vue-typer').default;
+Vue.use(VueTyperPlugin);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -18,6 +22,7 @@ window.Popper = require('popper.js').default;
  */
 
 Vue.component('example-component', require('./components/Example.vue'));
+Vue.component('typer-component', require('./components/Typer.vue'));
 
 const app = new Vue({
     el: '#app'

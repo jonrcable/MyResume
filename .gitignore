@@ -9,3 +9,4 @@ package-lock.json
 npm-debug.log
 yarn-error.log
 .env
+/resources/assets/.DS_Store
