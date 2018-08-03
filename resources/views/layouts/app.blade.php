@@ -22,7 +22,7 @@
 </head>
 <body>
 
-<div id="app">
+<div id="app" class="mb-lg-5">
 
     @include('partials/navigation')
 
@@ -31,8 +31,6 @@
         @yield('page-content')
 
     </main>
-
-    <example-component></example-component>
 
     @include('partials/footer')
 

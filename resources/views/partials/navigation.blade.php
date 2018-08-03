@@ -25,9 +25,6 @@
                     <a class="nav-link" href="#">Education </a>
                 </li>
                 <li class="nav-item align-links">
-                    <a class="nav-link" href="#">Music </a>
-                </li>
-                <li class="nav-item align-links">
                     <a class="nav-link" href="#">Contact </a>
                 </li>
             </ul>

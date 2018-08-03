@@ -20,6 +20,12 @@
   max-width: 960px;
 }
 
+// constrain the homepg images
+.image-home {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
 // constrain the logo
 .logo {
   max-height: 30px;
@@ -81,11 +87,21 @@
 .jumbotron{
   background-color: #0099ff;
   color: #343a40;
+  margin-bottom: 0 !important;
+  padding: 1rem 1rem !important;
 }
 
 .badge-blue {
   color: rgba(255, 255, 255, 0.8);
   background-color: #0099ff;
+}
+
+/* Gradient transparent - color - transparent */
+
+hr.style-transparent {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
 /*

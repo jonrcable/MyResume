@@ -1,5 +1,5 @@
 <template>
-    <vue-typer :text="['Hi, my name is Jon.','I am a Developer...','..an Engineer...','..a Creative.','I love too build...','...design..','...and create.', 'Explore my world...','Thanks for visiting!']""></vue-typer>
+    <vue-typer :type-delay='25' :erase-delay='50' :text="['Hi, my name is Jon.','I am a Developer...','..an Engineer...','..a Maker.','I love to build...','...design..','...and create.', 'Explore my world...','Thanks for visiting!']""></vue-typer>
 </template>
 
 <script>
