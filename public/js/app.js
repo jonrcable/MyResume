@@ -62984,7 +62984,7 @@ var render = function() {
   return _c("vue-typer", {
     attrs: {
       "type-delay": 25,
-      "erase-delay": 50,
+      "erase-delay": 40,
       text: [
         "Hi, my name is Jon.",
         "I am a Developer...",

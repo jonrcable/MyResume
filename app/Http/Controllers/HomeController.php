@@ -13,7 +13,8 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        // to keep this app simple no user authentication atm
+        // $this->middleware('auth');
     }
 
     /**

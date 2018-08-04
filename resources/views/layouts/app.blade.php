@@ -28,6 +28,40 @@
 
     <main role="main">
 
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+
+            @if(Request::is('/'))
+
+                <div class="bg-secondary pt-2 pb-1">
+
+                    @yield('welcome')
+
+                </div>
+
+            @else
+
+                <div class="bg-secondary pt-3">
+
+                    <div class="container">
+
+                        <div class="d-flex">
+
+                            @include('partials/breadcrumb')
+
+                            <div class="ml-auto">
+
+                                @yield('page-crumbs')
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            @endif
+
         @yield('page-content')
 
     </main>
