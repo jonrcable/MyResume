@@ -4,13 +4,13 @@
 @section('meta-description', 'Do you have an interesting project? Lets build something.')
 @section('meta-keywords', 'Jon Cable, Resume, Portfolio, Full Stack, Open Source, Developer, Austin, Texas')
 
-@section('page-title', 'Education')
+@section('page-title', 'Contact')
 
 @section('page-crumbs')
 
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb bg-dark breadcrumb-fix">
-            <li class="breadcrumb-item active" aria-current="page">Education</li>
+            <li class="breadcrumb-item active" aria-current="page">Contact</li>
         </ol>
     </nav>
 

@@ -4,6 +4,12 @@
 
 <script>
 
-    console.log('Typer Loaded.');
+    export default {
+        mounted() {
+
+            console.log('Typer Mounted.');
+
+        }
+    }
 
 </script>

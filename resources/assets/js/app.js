@@ -24,10 +24,12 @@ Vue.use(BootstrapVue);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example-component', require('./components/Example.vue'));
+// Vue.component('example-component', require('./components/Example.vue'));
 Vue.component('typer-component', require('./components/Typer.vue'));
 Vue.component('carousel-component', require('./components/Carousel.vue'));
+Vue.component('animated-component', require('./components/Animated.vue'));
 
+// start the vue app
 const app = new Vue({
     el: '#app'
 });
