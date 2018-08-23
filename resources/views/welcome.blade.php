@@ -57,7 +57,7 @@
 
             <div class="col-md-4 mt-2 mb-3">
                 <div class="card">
-                    <img class="card-img-top image-home" src="/media/historyhome.png" alt="Professional work history">
+                    <img class="card-img-top image-home shake" src="/media/historyhome.png" alt="Professional work history">
                     <div class="card-body">
                         <h3 class="text-center text-black-50">History</h3>
                         <p class="card-text">Providing technology leadership for startups since 2001 has been an enriching journey. </p>
@@ -67,7 +67,7 @@
             </div>
             <div class="col-md-4 mt-2 mb-3">
                 <div class="card">
-                    <img class="card-img-top image-home" src="/media/projecthome.png" alt="Projects I have worked on">
+                    <img class="card-img-top image-home shake" src="/media/projecthome.png" alt="Projects I have worked on">
                     <div class="card-body">
                         <h3 class="text-center text-black-50">Projects</h3>
                         <p class="card-text">From Web to LEDs finding ways to apply creative use of technology is really fun.</p>
@@ -77,7 +77,7 @@
             </div>
             <div class="col-md-4 mt-2 mb-3">
                 <div class="card">
-                    <img class="card-img-top image-home" src="/media/skillshome.png" alt="Technologies I love to use">
+                    <img class="card-img-top image-home shake" src="/media/skillshome.png" alt="Technologies I love to use">
                     <div class="card-body">
                         <h3 class="text-center text-black-50">Technology</h3>
                         <p class="card-text">Hardware and software, I dig technology, always learning and exploring new challenges.</p>

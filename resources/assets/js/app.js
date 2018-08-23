@@ -18,6 +18,9 @@ Vue.use(VueTyperPlugin);
 var BootstrapVue = require('bootstrap-vue').default;
 Vue.use(BootstrapVue);
 
+var VueScrollTo = require('vue-scrollto');
+Vue.use(VueScrollTo);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -28,8 +31,12 @@ Vue.use(BootstrapVue);
 Vue.component('typer-component', require('./components/Typer.vue'));
 Vue.component('carousel-component', require('./components/Carousel.vue'));
 Vue.component('animated-component', require('./components/Animated.vue'));
+Vue.component('timeline-component', require('./components/Timeline.vue'));
 
 // start the vue app
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    methods: {
+        // no global methods yet
+    }
 });

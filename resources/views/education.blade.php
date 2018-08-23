@@ -46,7 +46,7 @@
                 Devry University <br> <span class="text-black-50">(Austin, Texas) </span>
             </div>
             <div class="col-12 mt-2 text-black-50 font-italic small">
-                <span>Degree Highlights: </span><span>Project management, SAAS strategies, Global business, Business law</span>
+                <span>Highlights: </span><span>Project management, SAAS strategies, Global business, Business law</span>
 
             </div>
             <div class="col-12 mt-2 font-weight-light">
@@ -68,7 +68,7 @@
                 North Harris <br> <span class="text-black-50">(Spring, Texas) </span>
             </div>
             <div class="col-12 mt-2 text-black-50 font-italic small">
-                <span>Degree Highlights: </span><span>Microsoft enterprise implementations, Network infrastructure, Hardware/software, Project management</span>
+                <span>Highlights: </span><span>Microsoft enterprise implementations, Network infrastructure, Hardware/software, Project management</span>
             </div>
             <div class="col-12 mt-2 font-weight-light">
                 Early in my technical career the web was not what it is today. Fueled by onsite work experience and personal projects we were making the rules up as we went. Since I have been working with Hardware/Software since the MSDOS days I choose a concentration in networking specifically Microsoft and Cisco Enterprise implementations. This core background has proven to be an invaluable foundation for my technical career.
@@ -90,7 +90,7 @@
                 North Harris <br> <span class="text-black-50">(Spring, Texas) </span>
             </div>
             <div class="col-12 mt-2 text-black-50 font-italic small">
-                <span>Degree Highlights: </span><span>Routing and Network Topology, OSI Model and Protocol Stacks, DNS, Routing and Switching Protocols</span>
+                <span>Highlights: </span><span>Network Topology, OSI Model, DNS, Routing and Switching Protocols</span>
             </div>
             <div class="col-12 mt-2 font-weight-light">
                 Networking is everywhere; you’ll find its core principles in Application Development and Systems Architecture. Understanding the principles of Protocols, Routing, DNS and Network topology is helpful to understanding how complex environments work at a fundamental level. I’ve relied upon my cisco basics throughout much of my career as a developer.

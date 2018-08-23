@@ -16999,6 +16999,11 @@ a.text-dark:focus {
   width: auto;
 }
 
+.timeliny {
+  padding: 6rem 0 !important;
+  margin: 0 auto 2rem !important;
+}
+
 .shake {
   display: inline-block;
 }
