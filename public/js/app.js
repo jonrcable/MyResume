@@ -9871,9 +9871,13 @@ Vue.use(VueScrollTo);
  */
 
 // Vue.component('example-component', require('./components/Example.vue'));
+// homepage typer componet
 Vue.component('typer-component', __webpack_require__(218));
+// homepage carosel component
 Vue.component('carousel-component', __webpack_require__(221));
+// add home cooked hack to hover text with animated.css
 Vue.component('animated-component', __webpack_require__(224));
+// my own custom timeline component
 Vue.component('timeline-component', __webpack_require__(227));
 
 // start the vue app
@@ -63784,6 +63788,25 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -63837,176 +63860,218 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("div", { staticClass: "row small text-black-50 mt-2 mb-2" }, [
+  return _c("div", { staticClass: "jumbotron" }, [
+    _c("div", { staticClass: "row small text-white text-center mb-4" }, [
       _c(
         "div",
-        {
-          staticClass: "col-12 text-center",
-          attrs: { id: "animated-history", animation: "jackInTheBox" }
-        },
+        { staticClass: "col-4 col-lg-2 col-md-2 col-sm-2 text-center shake" },
         [
-          _c("span", { domProps: { innerHTML: _vm._s(_vm.date) } }),
-          _vm._v(" "),
-          _c("br"),
-          _vm._v(" "),
-          _c("span", { domProps: { innerHTML: _vm._s(_vm.company) } }),
-          _vm._v(" "),
-          _c("br"),
-          _vm._v(" "),
-          _c("span", { domProps: { innerHTML: _vm._s(_vm.title) } }),
-          _vm._v(" "),
-          _c("br"),
-          _vm._v(" "),
-          _c("span", {
-            staticClass: "ml-2",
-            domProps: { innerHTML: _vm._s(_vm.industry) }
-          }),
-          _vm._v(" "),
-          _c("br"),
-          _vm._v(" "),
           _c(
             "a",
             {
-              staticClass: "btn btn-outline-secondary btn-sm mt-2 mb-1",
-              attrs: { id: "link-history" },
               on: {
                 click: function($event) {
-                  _vm.gotocompany()
+                  _vm.gotimeline(
+                    "Agellus Engineering",
+                    "Software Architect",
+                    "Nov '15 – Present",
+                    "Industrial Engineering",
+                    "Austin Texas",
+                    "agellus"
+                  )
                 }
               }
             },
-            [_vm._v("More Info")]
+            [_vm._v("2018")]
+          )
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "col-4 col-lg-2 col-md-2 col-sm-2 text-center shake" },
+        [
+          _c(
+            "a",
+            {
+              on: {
+                click: function($event) {
+                  _vm.gotimeline(
+                    "SPC Direct",
+                    "Technical Consultant",
+                    "Oct '14 – Nov '15",
+                    "Digital Marketing ",
+                    "Austin Texas",
+                    "spcdirect"
+                  )
+                }
+              }
+            },
+            [_vm._v("2014")]
+          )
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "col-4 col-lg-2 col-md-2 col-sm-2 text-center shake" },
+        [
+          _c(
+            "a",
+            {
+              on: {
+                click: function($event) {
+                  _vm.gotimeline(
+                    "SaleAmp",
+                    "Director Development & Design",
+                    "Oct '13 – Oct '14",
+                    "Digital Marketing",
+                    "Austin Texas",
+                    "saleamp"
+                  )
+                }
+              }
+            },
+            [_vm._v("2013")]
+          )
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "col-4 col-lg-2 col-md-2 col-sm-2 text-center shake" },
+        [
+          _c(
+            "a",
+            {
+              on: {
+                click: function($event) {
+                  _vm.gotimeline(
+                    "Photon Factory",
+                    "Technical Director Partner",
+                    "May '09 – Oct '13",
+                    "Offshore Engineering",
+                    "Austin Texas",
+                    "photon"
+                  )
+                }
+              }
+            },
+            [_vm._v("2009")]
+          )
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "col-4 col-lg-2 col-md-2 col-sm-2 text-center shake" },
+        [
+          _c(
+            "a",
+            {
+              on: {
+                click: function($event) {
+                  _vm.gotimeline(
+                    "Publications and Communications",
+                    "Web & Technical Manager",
+                    "May '04 – May '09",
+                    "Online Publishing",
+                    "Austin Texas",
+                    "pcinews"
+                  )
+                }
+              }
+            },
+            [_vm._v("2004")]
+          )
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "col-4 col-lg-2 col-md-2 col-sm-2 text-center shake" },
+        [
+          _c(
+            "a",
+            {
+              on: {
+                click: function($event) {
+                  _vm.gotimeline(
+                    "Able Management Company",
+                    "Web & Technical Manager",
+                    "May '01 – Aug '02",
+                    "Ecommerce",
+                    "Huntsville Texas",
+                    "ableammo"
+                  )
+                }
+              }
+            },
+            [_vm._v("2001")]
           )
         ]
       )
     ]),
     _vm._v(" "),
-    _c("div", { staticClass: "row small text-black-50 text-center mb-4" }, [
-      _c("div", { staticClass: "col-2 text-center shake" }, [
-        _c(
-          "a",
-          {
-            on: {
-              click: function($event) {
-                _vm.gotimeline(
-                  "Agellus Engineering",
-                  "Software Architect",
-                  "Nov '15 – Present",
-                  "Industrial Engineering",
-                  "Austin Texas",
-                  "agellus"
-                )
-              }
-            }
-          },
-          [_vm._v("2018")]
-        )
+    _c("div", { staticClass: "card text-center text-black-50" }, [
+      _c("div", { staticClass: "card-body" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-lg-3 col-md-2 col-sm-1" }),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-12 col-lg-3 col-md-4 col-sm-5" }, [
+            _c(
+              "div",
+              { attrs: { id: "animated-history", animation: "jackInTheBox" } },
+              [
+                _c("span", {
+                  staticClass: "font-weight-bold",
+                  domProps: { innerHTML: _vm._s(_vm.company) }
+                })
+              ]
+            ),
+            _vm._v(" "),
+            _c("span", {
+              staticClass: "small",
+              domProps: { innerHTML: _vm._s(_vm.title) }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-12 col-lg-3 col-md-4 col-sm-5" }, [
+            _c("span", {
+              staticClass: "small font-italic",
+              domProps: { innerHTML: _vm._s(_vm.date) }
+            }),
+            _vm._v(" "),
+            _c("br"),
+            _vm._v(" "),
+            _c("span", {
+              staticClass: "small",
+              domProps: { innerHTML: _vm._s(_vm.industry) }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-lg-3 col-md-2 col-sm-1" })
+        ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "col-2 text-center shake" }, [
-        _c(
-          "a",
-          {
-            on: {
-              click: function($event) {
-                _vm.gotimeline(
-                  "SPC Direct",
-                  "Technical Consultant",
-                  "Oct '14 – Nov '15",
-                  "Digital Marketing ",
-                  "Austin Texas",
-                  "spcdirect"
-                )
-              }
-            }
-          },
-          [_vm._v("2014")]
-        )
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-2 text-center shake" }, [
-        _c(
-          "a",
-          {
-            on: {
-              click: function($event) {
-                _vm.gotimeline(
-                  "SaleAmp",
-                  "Director Development & Design",
-                  "Oct '13 – Oct '14",
-                  "Digital Marketing",
-                  "Austin Texas",
-                  "saleamp"
-                )
-              }
-            }
-          },
-          [_vm._v("2013")]
-        )
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-2 text-center shake" }, [
-        _c(
-          "a",
-          {
-            on: {
-              click: function($event) {
-                _vm.gotimeline(
-                  "Photon Factory",
-                  "Technical Director Partner",
-                  "May '09 – Oct '13",
-                  "Offshore Engineering",
-                  "Austin Texas",
-                  "photon"
-                )
-              }
-            }
-          },
-          [_vm._v("2009")]
-        )
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-2 text-center shake" }, [
-        _c(
-          "a",
-          {
-            on: {
-              click: function($event) {
-                _vm.gotimeline(
-                  "Publications and Communications",
-                  "Web & Technical Manager",
-                  "May '04 – May '09",
-                  "Online Publishing",
-                  "Austin Texas",
-                  "pcinews"
-                )
-              }
-            }
-          },
-          [_vm._v("2004")]
-        )
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-1 text-center ml-1 shake" }, [
-        _c(
-          "a",
-          {
-            on: {
-              click: function($event) {
-                _vm.gotimeline(
-                  "Able Management Company",
-                  "Web & Technical Manager",
-                  "May '01 – Aug '02",
-                  "Ecommerce",
-                  "Huntsville Texas",
-                  "ableammo"
-                )
-              }
-            }
-          },
-          [_vm._v("2001")]
-        )
+      _c("div", { staticClass: "card-footer text-muted" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-12 text-center" }, [
+            _c(
+              "a",
+              {
+                staticClass: "btn btn-light btn-sm",
+                attrs: { id: "link-history" },
+                on: {
+                  click: function($event) {
+                    _vm.gotocompany()
+                  }
+                }
+              },
+              [_vm._v("More Info")]
+            )
+          ])
+        ])
       ])
     ])
   ])

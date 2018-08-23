@@ -36,9 +36,9 @@
 
         <timeline-component></timeline-component>
 
-        <div class="row">
+        <div class="row mt-4">
             <div class="col-12 text-black-50">
-                <h3 class="h5 animated-hover" animation="flipOutX">Agellus Engineering</h3>
+                <h3 class="h5">Agellus Engineering</h3>
             </div>
             <div class="col-12 col-lg-1 col-md-1">
                 <img src="/media/edu/devry.png" class="img-thumbnail image-thumb shake" />
@@ -60,7 +60,7 @@
 
         <div class="row mt-4">
             <div class="col-12 text-black-50">
-                <h3 class="h5 animated-hover" animation="flipOutX">SPC Direct</h3>
+                <h3 class="h5">SPC Direct</h3>
             </div>
             <div class="col-12 col-lg-1 col-md-1">
                 <img src="/media/edu/devry.png" class="img-thumbnail image-thumb shake" />
@@ -83,7 +83,7 @@
 
         <div class="row mt-4">
             <div class="col-12 text-black-50">
-                <h3 class="h5 animated-hover" animation="flipOutX">SaleAmp</h3>
+                <h3 class="h5">SaleAmp</h3>
             </div>
             <div class="col-12 col-lg-1 col-md-1">
                 <img src="/media/edu/devry.png" class="img-thumbnail image-thumb shake" />
@@ -106,7 +106,7 @@
 
         <div class="row mt-4">
             <div class="col-12 text-black-50">
-                <h3 class="h5 animated-hover" animation="flipOutX">Photon Factory</h3>
+                <h3 class="h5">Photon Factory</h3>
             </div>
             <div class="col-12 col-lg-1 col-md-1">
                 <img src="/media/edu/devry.png" class="img-thumbnail image-thumb shake" />
@@ -129,7 +129,7 @@
 
         <div class="row mt-4">
             <div class="col-12 text-black-50">
-                <h3 class="h5 animated-hover" animation="flipOutX">Publications & Communications</h3>
+                <h3 class="h5">Publications & Communications</h3>
             </div>
             <div class="col-12 col-lg-1 col-md-1">
                 <img src="/media/edu/devry.png" class="img-thumbnail image-thumb shake" />
@@ -152,7 +152,7 @@
 
         <div class="row mt-4" >
             <div class="col-12 text-black-50">
-                <h3 class="h5 animated-hover" animation="flipOutX">Able Management Company</h3>
+                <h3 class="h5">Able Management Company</h3>
             </div>
             <div class="col-12 col-lg-1 col-md-1">
                 <img src="/media/edu/devry.png" class="img-thumbnail image-thumb shake" />
