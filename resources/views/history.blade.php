@@ -8,6 +8,8 @@
 
 @section('page-crumbs')
 
+    <span id="top"></span>
+
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb bg-dark breadcrumb-fix">
             <li class="breadcrumb-item active" aria-current="page">History</li>
@@ -37,8 +39,11 @@
         <timeline-component></timeline-component>
 
         <div class="row mt-4">
-            <div class="col-12 text-black-50">
+            <div class="col-10 text-black-50">
                 <h3 class="h5">Agellus Engineering</h3>
+            </div>
+            <div class="col-2 text-black-50 text-right h5">
+                <a v-scroll-to="'#top'"><i class="fa fa-arrow-circle-up"></i></a>
             </div>
             <div class="col-12 col-lg-1 col-md-1">
                 <img src="/media/edu/devry.png" class="img-thumbnail image-thumb shake" />
@@ -59,8 +64,11 @@
         </div>
 
         <div class="row mt-4">
-            <div class="col-12 text-black-50">
+            <div class="col-10 text-black-50">
                 <h3 class="h5">SPC Direct</h3>
+            </div>
+            <div class="col-2 text-black-50 text-right h5">
+                <a v-scroll-to="'#top'"><i class="fa fa-arrow-circle-up"></i></a>
             </div>
             <div class="col-12 col-lg-1 col-md-1">
                 <img src="/media/edu/devry.png" class="img-thumbnail image-thumb shake" />
@@ -82,8 +90,11 @@
         </div>
 
         <div class="row mt-4">
-            <div class="col-12 text-black-50">
+            <div class="col-10 text-black-50">
                 <h3 class="h5">SaleAmp</h3>
+            </div>
+            <div class="col-2 text-black-50 text-right h5">
+                <a v-scroll-to="'#top'"><i class="fa fa-arrow-circle-up"></i></a>
             </div>
             <div class="col-12 col-lg-1 col-md-1">
                 <img src="/media/edu/devry.png" class="img-thumbnail image-thumb shake" />
@@ -105,8 +116,11 @@
         </div>
 
         <div class="row mt-4">
-            <div class="col-12 text-black-50">
+            <div class="col-10 text-black-50">
                 <h3 class="h5">Photon Factory</h3>
+            </div>
+            <div class="col-2 text-black-50 text-right h5">
+                <a v-scroll-to="'#top'"><i class="fa fa-arrow-circle-up"></i></a>
             </div>
             <div class="col-12 col-lg-1 col-md-1">
                 <img src="/media/edu/devry.png" class="img-thumbnail image-thumb shake" />
@@ -128,8 +142,11 @@
         </div>
 
         <div class="row mt-4">
-            <div class="col-12 text-black-50">
+            <div class="col-10 text-black-50">
                 <h3 class="h5">Publications & Communications</h3>
+            </div>
+            <div class="col-2 text-black-50 text-right h5">
+                <a v-scroll-to="'#top'"><i class="fa fa-arrow-circle-up"></i></a>
             </div>
             <div class="col-12 col-lg-1 col-md-1">
                 <img src="/media/edu/devry.png" class="img-thumbnail image-thumb shake" />
@@ -151,8 +168,11 @@
         </div>
 
         <div class="row mt-4" >
-            <div class="col-12 text-black-50">
+            <div class="col-10 text-black-50">
                 <h3 class="h5">Able Management Company</h3>
+            </div>
+            <div class="col-2 text-black-50 text-right h5">
+                <a v-scroll-to="'#top'"><i class="fa fa-arrow-circle-up"></i></a>
             </div>
             <div class="col-12 col-lg-1 col-md-1">
                 <img src="/media/edu/devry.png" class="img-thumbnail image-thumb shake" />

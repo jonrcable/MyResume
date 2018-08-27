@@ -8,6 +8,8 @@
 
 @section('page-crumbs')
 
+    <span id="top"></span>
+
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb bg-dark breadcrumb-fix">
             <li class="breadcrumb-item active" aria-current="page">Technology</li>
@@ -32,10 +34,36 @@
             </div>
         </div>
 
-        <div class="row mt-3">
-            <div class="col-sm-12 text-black-50">
-                <h3 class="h5 animated-hover" id="language" animation="fadeOut">Languages</h3>
+        <!-- Bootstrap.vue menu group with tooltips -->
+        <b-row class="mb-4 text-black-50 small">
+            <b-col cols="12">
+                <b-button-group>
+                    <b-button variant="secondary"><i class="fa fa-bookmark"></i></b-button>
+                    <b-button id="languages-menu" variant="outline-secondary" v-scroll-to="'#languages'"><i class="fa fa-code"></i></b-button>
+                    <b-button id="frameworks-menu" variant="outline-secondary" v-scroll-to="'#frameworks'"><i class="fa fa-cogs"></i></b-button>
+                    <b-button id="os-menu" variant="outline-secondary" v-scroll-to="'#os'"><i class="fa fa-laptop"></i></b-button>
+                    <b-button id="productivity-menu" variant="outline-secondary" v-scroll-to="'#productivity'"><i class="fa fa-window-restore"></i></b-button>
+                    <b-button id="hosting-menu" variant="outline-secondary" v-scroll-to="'#hosting'"><i class="fa fa-cloud"></i></b-button>
+                    <b-button id="hardware-menu" variant="outline-secondary" v-scroll-to="'#hardware'"><i class="fa fa-microchip"></i></b-button>
+                </b-button-group>
+            </b-col>
+            <span id="languages"></span>
+        </b-row>
+        <!-- Tooltips and controls for menu -->
+        <b-tooltip target="languages-menu" title="Languages" placement="bottom" triggers="hover"></b-tooltip>
+        <b-tooltip target="frameworks-menu" title="Frameworks" placement="bottom" triggers="hover"></b-tooltip>
+        <b-tooltip target="os-menu" title="Operating Systems" placement="bottom" triggers="hover"></b-tooltip>
+        <b-tooltip target="productivity-menu" title="Productivity" placement="bottom" triggers="hover"></b-tooltip>
+        <b-tooltip target="hosting-menu" title="Hosting" placement="bottom" triggers="hover"></b-tooltip>
+        <b-tooltip target="hardware-menu" title="Libs & Hardware" placement="bottom" triggers="hover"></b-tooltip>
 
+
+        <div class="row mt-3">
+            <div class="col-10 text-black-50">
+                <h3 class="h5">Languages</h3>
+            </div>
+            <div class="col-2 text-black-50 text-right h5">
+                <a v-scroll-to="'#top'"><i class="fa fa-arrow-circle-up"></i></a>
             </div>
             <div class="col-12 col-lg-3 col-md-6 col-sm-6 col-xs-12 text-black-50 text-center">
                 <span class="shake">
@@ -61,11 +89,15 @@
                     <small>Perl</small>
                 </span>
             </div>
+            <span id="frameworks"></span>
         </div>
 
         <div class="row mt-3">
-            <div class="col-sm-12 text-black-50">
-                <h3 class="h5 animated-hover" id="frameworks" animation="fadeOut">Frameworks</h3>
+            <div class="col-10 text-black-50">
+                <h3 class="h5">Frameworks</h3>
+            </div>
+            <div class="col-2 text-black-50 text-right h5">
+                <a v-scroll-to="'#top'"><i class="fa fa-arrow-circle-up"></i></a>
             </div>
             <div class="col-12 col-lg-3 col-md-6 col-sm-6 col-xs-12 text-black-50 text-center">
                 <span class="shake">
@@ -91,11 +123,15 @@
                     <small>Robotics Operating System</small>
                 </span>
             </div>
+            <span id="os"></span>
         </div>
 
         <div class="row mt-3">
-            <div class="col-sm-12 text-black-50">
-                <h3 class="h5 animated-hover" id="os" animation="fadeOut">Operating Systems</h3>
+            <div class="col-10 text-black-50">
+                <h3 class="h5">Operating Systems</h3>
+            </div>
+            <div class="col-2 text-black-50 text-right h5">
+                <a v-scroll-to="'#top'"><i class="fa fa-arrow-circle-up"></i></a>
             </div>
             <div class="col-12 col-lg-3 col-md-6 col-sm-6 col-xs-12 text-black-50 text-center">
                 <span class="shake">
@@ -121,11 +157,15 @@
                     <small>CentOS</small>
                 </span>
             </div>
+            <span id="productivity"></span>
         </div>
 
         <div class="row mt-3">
-            <div class="col-sm-12 text-black-50">
-                <h3 class="h5 animated-hover" id="productivity" animation="fadeOut">Productivity</h3>
+            <div class="col-10 text-black-50">
+                <h3 class="h5">Productivity</h3>
+            </div>
+            <div class="col-2 text-black-50 text-right h5">
+                <a v-scroll-to="'#top'"><i class="fa fa-arrow-circle-up"></i></a>
             </div>
             <div class="col-12 col-lg-3 col-md-6 col-sm-6 col-xs-12 text-black-50 text-center">
                 <span class="shake">
@@ -151,11 +191,15 @@
                     <small>Git</small>
                 </span>
             </div>
+            <span id="hosting"></span>
         </div>
 
         <div class="row mt-3">
-            <div class="col-sm-12 text-black-50">
-                <h3 class="h5 animated-hover" id="hosting" animation="fadeOut">Hosting</h3>
+            <div class="col-10 text-black-50">
+                <h3 class="h5">Hosting</h3>
+            </div>
+            <div class="col-2 text-black-50 text-right h5">
+                <a v-scroll-to="'#top'"><i class="fa fa-arrow-circle-up"></i></a>
             </div>
             <div class="col-12 col-lg-3 col-md-6 col-sm-6 col-xs-12 text-black-50 text-center">
                 <span class="shake">
@@ -181,11 +225,15 @@
                     <small>WP Engine</small>
                 </span>
             </div>
+            <span id="hardware"></span>
         </div>
 
         <div class="row mt-3 mb-5">
-            <div class="col-sm-12 text-black-50">
-                <h3 class="h5 animated-hover" id="hardware" animation="fadeOut">Libs and Hardware</h3>
+            <div class="col-10 text-black-50">
+                <h3 class="h5">Libs & Hardware</h3>
+            </div>
+            <div class="col-2 text-black-50 text-right h5">
+                <a v-scroll-to="'#top'"><i class="fa fa-arrow-circle-up"></i></a>
             </div>
             <div class="col-12 col-lg-3 col-md-6 col-sm-6 col-xs-12 text-black-50 text-center">
                 <span class="shake">

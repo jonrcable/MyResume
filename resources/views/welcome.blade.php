@@ -61,7 +61,7 @@
                     <div class="card-body">
                         <h3 class="text-center text-black-50">History</h3>
                         <p class="card-text">Providing technology leadership for startups since 2001 has been an enriching journey. </p>
-                        <div class="text-center"><a href="#" class="btn btn-outline-secondary">View My History</a></div>
+                        <div class="text-center"><a href="/history" class="btn btn-outline-secondary">View My History</a></div>
                     </div>
                 </div>
             </div>
@@ -71,7 +71,7 @@
                     <div class="card-body">
                         <h3 class="text-center text-black-50">Projects</h3>
                         <p class="card-text">From Web to LEDs finding ways to apply creative use of technology is really fun.</p>
-                        <div class="text-center"><a href="#" class="btn btn-outline-secondary">Explore My Projects</a></div>
+                        <div class="text-center"><a href="/projects" class="btn btn-outline-secondary">Explore My Projects</a></div>
                     </div>
                 </div>
             </div>
@@ -81,7 +81,7 @@
                     <div class="card-body">
                         <h3 class="text-center text-black-50">Technology</h3>
                         <p class="card-text">Hardware and software, I dig technology, always learning and exploring new challenges.</p>
-                        <div class="text-center"><a href="#" class="btn btn-outline-secondary">Browse My Skills</a></div>
+                        <div class="text-center"><a href="/technology" class="btn btn-outline-secondary">Browse My Skills</a></div>
                     </div>
                 </div>
             </div>
