@@ -3,7 +3,7 @@
 
         <!--Form with header-->
         <!--Inject the Google Captcha from the Laravel Component-->
-        <contact-component :captcha-data="'{{ json_encode(env('NOCAPTCHA_SITEKEY')) }}'"></contact-component>
+        <contact-component :captcha-data="{{ json_encode(env('NOCAPTCHA_SITEKEY')) }}"></contact-component>
 
     </div>
 </div>

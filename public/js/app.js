@@ -64266,6 +64266,7 @@ console.log('Webpacked Assets.');
   },
   mounted: function mounted() {
     console.log('Form Component Mounted.');
+    console.log(this.captchaData);
   }
 });
 
