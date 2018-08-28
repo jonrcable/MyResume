@@ -72,6 +72,8 @@
 
 <!-- Mixed Scripts -->
 <script type="text/javascript" src="{{ mix('js/app.js') }}"></script>
+<!-- any remote js routines .. e.g. tracking, services, etc -->
+@yield('extras')
 
 </body>
 </html>

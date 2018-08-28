@@ -67,6 +67,13 @@
                         </div>
                     </div>
 
+                    <div class="form-group">
+                        <div class="g-recaptcha" :data-sitekey="captchaData"></div>
+                        <div v-if="errors && errors.message">
+                            <div class="invalid-feedback small">{{ errors.message[0] }}</div>
+                        </div>
+                    </div>
+
                     <div class="text-center">
                         <input type="submit" value="Contact Me" class="btn btn-outline-secondary btn-block rounded-0 py-2">
                     </div>
@@ -90,6 +97,7 @@
               action: '/incoming'
             }
         },
+        props: ['captchaData'],
         methods: {
             submit() {
               if (this.loaded) {
@@ -111,7 +119,7 @@
             },
         },
         mounted() {
-            console.log('Form Component Mounted.')
+            console.log('Form Component Mounted.');
         }
     }
 </script>

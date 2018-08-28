@@ -1,0 +1,2 @@
+<!-- Google ReCaptcha -->
+{!! NoCaptcha::renderJs() !!}

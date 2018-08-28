@@ -43,3 +43,7 @@
         Built using Laravel, Bootstrap and Vue.js
     </span>
 @endsection
+
+@section('extras')
+    @include('partials/captcha')
+@endsection

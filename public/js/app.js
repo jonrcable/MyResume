@@ -64221,6 +64221,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 console.log('Webpacked Assets.');
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -64234,6 +64241,7 @@ console.log('Webpacked Assets.');
     };
   },
 
+  props: ['captchaData'],
   methods: {
     submit: function submit() {
       var _this = this;
@@ -64499,6 +64507,21 @@ var render = function() {
                   })
                 ])
               ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group" }, [
+            _c("div", {
+              staticClass: "g-recaptcha",
+              attrs: { "data-sitekey": _vm.captchaData }
+            }),
+            _vm._v(" "),
+            _vm.errors && _vm.errors.message
+              ? _c("div", [
+                  _c("div", { staticClass: "invalid-feedback small" }, [
+                    _vm._v(_vm._s(_vm.errors.message[0]))
+                  ])
+                ])
+              : _vm._e()
+          ]),
           _vm._v(" "),
           _vm._m(7)
         ])
