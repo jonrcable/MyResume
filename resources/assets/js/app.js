@@ -36,8 +36,8 @@ Vue.component('carousel-component', require('./components/Carousel.vue'));
 Vue.component('animated-component', require('./components/Animated.vue'));
 // my own custom timeline component
 Vue.component('timeline-component', require('./components/Timeline.vue'));
-// my own custom timeline component
-Vue.component('tooltip-component', require('./components/ToolTips.vue'));
+// contact form component
+Vue.component('contact-component', require('./components/ContactForm.vue'));
 
 // start the vue app
 const app = new Vue({

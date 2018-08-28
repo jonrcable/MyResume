@@ -9879,8 +9879,8 @@ Vue.component('carousel-component', __webpack_require__(221));
 Vue.component('animated-component', __webpack_require__(224));
 // my own custom timeline component
 Vue.component('timeline-component', __webpack_require__(227));
-// my own custom timeline component
-Vue.component('tooltip-component', __webpack_require__(230));
+// contact form component
+Vue.component('contact-component', __webpack_require__(230));
 
 // start the vue app
 var app = new Vue({
@@ -64114,7 +64114,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/components/ToolTips.vue"
+Component.options.__file = "resources/assets/js/components/ContactForm.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -64123,9 +64123,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-085fb3b2", Component.options)
+    hotAPI.createRecord("data-v-667ae69d", Component.options)
   } else {
-    hotAPI.reload("data-v-085fb3b2", Component.options)
+    hotAPI.reload("data-v-667ae69d", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -64157,14 +64157,108 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
-console.log('tooltips.');
+console.log('Webpacked Assets.');
 /* harmony default export */ __webpack_exports__["default"] = ({
-    mounted: function mounted() {
-        $(document).ready(function () {
-            $('[data-toggle="tooltip"]').tooltip();
+  data: function data() {
+    return {
+      fields: {},
+      errors: {},
+      success: false,
+      loaded: true,
+      action: '/incoming'
+    };
+  },
+
+  methods: {
+    submit: function submit() {
+      var _this = this;
+
+      if (this.loaded) {
+        this.loaded = false;
+        this.success = false;
+        this.errors = {};
+        axios.post(this.action, this.fields).then(function (response) {
+          _this.fields = {}; //Clear input fields.
+          _this.loaded = true;
+          _this.success = true;
+        }).catch(function (error) {
+          _this.loaded = true;
+          if (error.response.status === 422) {
+            _this.errors = error.response.data || {};
+            console.log(_this.errors);
+          }
         });
+      }
     }
+  },
+  mounted: function mounted() {
+    console.log('Form Component Mounted.');
+  }
 });
 
 /***/ }),
@@ -64176,40 +64270,333 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "b-container",
-    { attrs: { fluid: "" } },
+    "form",
+    {
+      on: {
+        submit: function($event) {
+          $event.preventDefault()
+          return _vm.submit($event)
+        }
+      }
+    },
     [
-      _c(
-        "b-row",
-        [
-          _c(
-            "b-col",
-            { staticClass: "py-4", attrs: { md: "4" } },
-            [
-              _c(
-                "b-btn",
-                { attrs: { id: "exButton1", variant: "outline-success" } },
-                [_vm._v("Live chat")]
-              )
-            ],
-            1
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c("b-tooltip", { attrs: { target: "exButton1", title: "Online!" } })
-    ],
-    1
+      _c("div", { staticClass: "card rounded-0" }, [
+        _vm._m(0),
+        _vm._v(" "),
+        _c("div", { staticClass: "card-body p-3" }, [
+          _vm.success
+            ? _c("div", { staticClass: "alert alert-success text-center" }, [
+                _vm._v("\n                 Thank you for contacting me. "),
+                _c("br"),
+                _vm._v(" I will be in touch soon!\n             ")
+              ])
+            : _vm._e(),
+          _vm._v(" "),
+          _vm.errors && _vm.errors.name
+            ? _c("div", { staticClass: "form-group" }, [
+                _c("div", { staticClass: "input-group" }, [
+                  _vm._m(1),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.fields.name,
+                        expression: "fields.name"
+                      }
+                    ],
+                    staticClass: "form-control is-invalid",
+                    attrs: {
+                      type: "text",
+                      id: "name",
+                      name: "name",
+                      placeholder: "Name"
+                    },
+                    domProps: { value: _vm.fields.name },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.fields, "name", $event.target.value)
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "invalid-feedback small" }, [
+                    _vm._v(_vm._s(_vm.errors.name[0]))
+                  ])
+                ])
+              ])
+            : _c("div", { staticClass: "form-group" }, [
+                _c("div", { staticClass: "input-group" }, [
+                  _vm._m(2),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.fields.name,
+                        expression: "fields.name"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: {
+                      type: "text",
+                      id: "name",
+                      name: "name",
+                      placeholder: "Name"
+                    },
+                    domProps: { value: _vm.fields.name },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.fields, "name", $event.target.value)
+                      }
+                    }
+                  })
+                ])
+              ]),
+          _vm._v(" "),
+          _vm.errors && _vm.errors.email
+            ? _c("div", { staticClass: "form-group" }, [
+                _c("div", { staticClass: "input-group" }, [
+                  _vm._m(3),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.fields.email,
+                        expression: "fields.email"
+                      }
+                    ],
+                    staticClass: "form-control is-invalid",
+                    attrs: {
+                      type: "email",
+                      id: "email",
+                      name: "email",
+                      placeholder: "sample@joncable.com"
+                    },
+                    domProps: { value: _vm.fields.email },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.fields, "email", $event.target.value)
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "invalid-feedback small" }, [
+                    _vm._v(_vm._s(_vm.errors.email[0]))
+                  ])
+                ])
+              ])
+            : _c("div", { staticClass: "form-group" }, [
+                _c("div", { staticClass: "input-group" }, [
+                  _vm._m(4),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.fields.email,
+                        expression: "fields.email"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: {
+                      type: "email",
+                      id: "email",
+                      name: "email",
+                      placeholder: "sample@joncable.com"
+                    },
+                    domProps: { value: _vm.fields.email },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.fields, "email", $event.target.value)
+                      }
+                    }
+                  })
+                ])
+              ]),
+          _vm._v(" "),
+          _vm.errors && _vm.errors.message
+            ? _c("div", { staticClass: "form-group has-danger" }, [
+                _c("div", { staticClass: "input-group" }, [
+                  _vm._m(5),
+                  _vm._v(" "),
+                  _c("textarea", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.fields.message,
+                        expression: "fields.message"
+                      }
+                    ],
+                    staticClass: "form-control is-invalid",
+                    attrs: {
+                      name: "message",
+                      id: "message",
+                      placeholder: "Message..."
+                    },
+                    domProps: { value: _vm.fields.message },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.fields, "message", $event.target.value)
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "invalid-feedback small" }, [
+                    _vm._v(_vm._s(_vm.errors.message[0]))
+                  ])
+                ])
+              ])
+            : _c("div", { staticClass: "form-group" }, [
+                _c("div", { staticClass: "input-group" }, [
+                  _vm._m(6),
+                  _vm._v(" "),
+                  _c("textarea", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.fields.message,
+                        expression: "fields.message"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: {
+                      name: "message",
+                      id: "message",
+                      placeholder: "Message..."
+                    },
+                    domProps: { value: _vm.fields.message },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.fields, "message", $event.target.value)
+                      }
+                    }
+                  })
+                ])
+              ]),
+          _vm._v(" "),
+          _vm._m(7)
+        ])
+      ])
+    ]
   )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card-header p-0" }, [
+      _c(
+        "div",
+        { staticClass: "bg-secondary text-white-50 text-center py-2" },
+        [_c("h6", [_vm._v("Do you want to chat about an opportunity?")])]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "input-group-prepend" }, [
+      _c("div", { staticClass: "input-group-text" }, [
+        _c("i", { staticClass: "fa fa-user text-danger" })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "input-group-prepend" }, [
+      _c("div", { staticClass: "input-group-text" }, [
+        _c("i", { staticClass: "fa fa-user text-dark" })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "input-group-prepend" }, [
+      _c("div", { staticClass: "input-group-text" }, [
+        _c("i", { staticClass: "fa fa-envelope text-danger" })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "input-group-prepend" }, [
+      _c("div", { staticClass: "input-group-text" }, [
+        _c("i", { staticClass: "fa fa-envelope text-dark" })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "input-group-prepend" }, [
+      _c("div", { staticClass: "input-group-text" }, [
+        _c("i", { staticClass: "fa fa-comment text-danger" })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "input-group-prepend" }, [
+      _c("div", { staticClass: "input-group-text" }, [
+        _c("i", { staticClass: "fa fa-comment text-dark" })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "text-center" }, [
+      _c("input", {
+        staticClass: "btn btn-outline-secondary btn-block rounded-0 py-2",
+        attrs: { type: "submit", value: "Contact Me" }
+      })
+    ])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-085fb3b2", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-667ae69d", module.exports)
   }
 }
 
