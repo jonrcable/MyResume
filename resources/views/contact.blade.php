@@ -6,6 +6,10 @@
 
 @section('page-title', 'Contact')
 
+@section('extras')
+    @include('partials/captcha')
+@endsection
+
 @section('page-crumbs')
 
     <nav aria-label="breadcrumb">
@@ -42,8 +46,4 @@
     <span class="text-muted">
         Built using Laravel, Bootstrap and Vue.js
     </span>
-@endsection
-
-@section('extras')
-    @include('partials/captcha')
 @endsection

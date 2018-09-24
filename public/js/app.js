@@ -9834,7 +9834,7 @@ var OBSERVER_CONFIG = {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(74);
-module.exports = __webpack_require__(233);
+module.exports = __webpack_require__(234);
 
 
 /***/ }),
@@ -64097,7 +64097,7 @@ var normalizeComponent = __webpack_require__(19)
 /* script */
 var __vue_script__ = __webpack_require__(231)
 /* template */
-var __vue_template__ = __webpack_require__(232)
+var __vue_template__ = __webpack_require__(233)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -64141,6 +64141,7 @@ module.exports = Component.exports
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_recaptcha__ = __webpack_require__(232);
 //
 //
 //
@@ -64228,395 +64229,280 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 console.log('Webpacked Assets.');
+
+
 /* harmony default export */ __webpack_exports__["default"] = ({
-  data: function data() {
-    return {
-      fields: {},
-      errors: {},
-      success: false,
-      loaded: true,
-      action: '/incoming'
-    };
-  },
+    components: { VueRecaptcha: __WEBPACK_IMPORTED_MODULE_0_vue_recaptcha__["a" /* default */] },
+    data: function data() {
+        return {
+            post: {
+                title: '',
+                body: '',
+                recaptcha: ''
+            },
+            errors: [],
+            fields: {},
+            success: false,
+            loaded: true,
+            action: '/incoming',
+            rcapt_id: 1
+        };
+    },
 
-  props: ['captchaData'],
-  methods: {
-    submit: function submit() {
-      var _this = this;
+    props: ['captchaData'],
+    methods: {
+        submit: function submit() {
+            var _this = this;
 
-      if (this.loaded) {
-        this.loaded = false;
-        this.success = false;
-        this.errors = {};
-        axios.post(this.action, this.fields).then(function (response) {
-          _this.fields = {}; //Clear input fields.
-          _this.loaded = true;
-          _this.success = true;
-        }).catch(function (error) {
-          _this.loaded = true;
-          if (error.response.status === 422) {
-            _this.errors = error.response.data || {};
-            console.log(_this.errors);
-          }
-        });
-      }
+            if (this.loaded) {
+                this.loaded = false;
+                this.success = false;
+                this.errors = {};
+                g_recaptcha_response = window.grecaptcha.getResponse(this.rcapt_id);
+                console.log(g_recaptcha_response);
+                console.log(this.fields);
+                axios.post(this.action, this.fields).then(function (response) {
+                    _this.fields = {}; //Clear input fields.
+                    _this.loaded = true;
+                    _this.success = true;
+                }).catch(function (error) {
+                    _this.loaded = true;
+                    if (error.response.status === 422) {
+                        _this.errors = error.response.data || {};
+                        console.log(_this.errors);
+                    }
+                });
+            }
+        },
+        onVerify: function onVerify(response) {
+            this.post.recaptcha = response;
+        },
+        addPost: function addPost() {
+            var _this2 = this;
+
+            axios.post(this.action, this.post, {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                }
+            }).then(function (_ref) {
+                var post = _ref.data.post;
+
+                $("#addPost").modal("hide");
+                _this2.errors = [];
+                _this2.$refs.recaptcha.reset();
+            }).catch(function (error) {
+                if (error) {
+                    _this2.errors = error.response.data.errors;
+                }
+            });
+        }
+    },
+    mounted: function mounted() {
+
+        console.log(this.captchaData);
     }
-  },
-  mounted: function mounted() {
-    console.log('Form Component Mounted.');
-    console.log(this.captchaData);
-  }
+
 });
 
 /***/ }),
 /* 232 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "form",
-    {
-      on: {
-        submit: function($event) {
-          $event.preventDefault()
-          return _vm.submit($event)
-        }
+"use strict";
+var defer = function defer() {
+  var state = false; // Resolved or not
+  var callbacks = [];
+  var resolve = function resolve(val) {
+    if (state) {
+      return;
+    }
+
+    state = true;
+    for (var i = 0, len = callbacks.length; i < len; i++) {
+      callbacks[i](val);
+    }
+  };
+
+  var then = function then(cb) {
+    if (!state) {
+      callbacks.push(cb);
+      return;
+    }
+    cb();
+  };
+
+  var deferred = {
+    resolved: function resolved() {
+      return state;
+    },
+
+    resolve: resolve,
+    promise: {
+      then: then
+    }
+  };
+  return deferred;
+};
+
+function createRecaptcha() {
+  var deferred = defer();
+
+  return {
+    notify: function notify() {
+      deferred.resolve();
+    },
+    wait: function wait() {
+      return deferred.promise;
+    },
+    render: function render(ele, options, cb) {
+      this.wait().then(function () {
+        cb(window.grecaptcha.render(ele, options));
+      });
+    },
+    reset: function reset(widgetId) {
+      if (typeof widgetId === 'undefined') {
+        return;
+      }
+
+      this.assertLoaded();
+      this.wait().then(function () {
+        return window.grecaptcha.reset(widgetId);
+      });
+    },
+    execute: function execute(widgetId) {
+      if (typeof widgetId === 'undefined') {
+        return;
+      }
+
+      this.assertLoaded();
+      this.wait().then(function () {
+        return window.grecaptcha.execute(widgetId);
+      });
+    },
+    checkRecaptchaLoad: function checkRecaptchaLoad() {
+      if (window.hasOwnProperty('grecaptcha') && window.grecaptcha.hasOwnProperty('render')) {
+        this.notify();
       }
     },
-    [
-      _c("div", { staticClass: "card rounded-0" }, [
-        _vm._m(0),
-        _vm._v(" "),
-        _c("div", { staticClass: "card-body p-3" }, [
-          _vm.success
-            ? _c("div", { staticClass: "alert alert-success text-center" }, [
-                _vm._v("\n                 Thank you for contacting me. "),
-                _c("br"),
-                _vm._v(" I will be in touch soon!\n             ")
-              ])
-            : _vm._e(),
-          _vm._v(" "),
-          _vm.errors && _vm.errors.name
-            ? _c("div", { staticClass: "form-group" }, [
-                _c("div", { staticClass: "input-group" }, [
-                  _vm._m(1),
-                  _vm._v(" "),
-                  _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.fields.name,
-                        expression: "fields.name"
-                      }
-                    ],
-                    staticClass: "form-control is-invalid",
-                    attrs: {
-                      type: "text",
-                      id: "name",
-                      name: "name",
-                      placeholder: "Name"
-                    },
-                    domProps: { value: _vm.fields.name },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.$set(_vm.fields, "name", $event.target.value)
-                      }
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "invalid-feedback small" }, [
-                    _vm._v(_vm._s(_vm.errors.name[0]))
-                  ])
-                ])
-              ])
-            : _c("div", { staticClass: "form-group" }, [
-                _c("div", { staticClass: "input-group" }, [
-                  _vm._m(2),
-                  _vm._v(" "),
-                  _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.fields.name,
-                        expression: "fields.name"
-                      }
-                    ],
-                    staticClass: "form-control",
-                    attrs: {
-                      type: "text",
-                      id: "name",
-                      name: "name",
-                      placeholder: "Name"
-                    },
-                    domProps: { value: _vm.fields.name },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.$set(_vm.fields, "name", $event.target.value)
-                      }
-                    }
-                  })
-                ])
-              ]),
-          _vm._v(" "),
-          _vm.errors && _vm.errors.email
-            ? _c("div", { staticClass: "form-group" }, [
-                _c("div", { staticClass: "input-group" }, [
-                  _vm._m(3),
-                  _vm._v(" "),
-                  _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.fields.email,
-                        expression: "fields.email"
-                      }
-                    ],
-                    staticClass: "form-control is-invalid",
-                    attrs: {
-                      type: "email",
-                      id: "email",
-                      name: "email",
-                      placeholder: "sample@joncable.com"
-                    },
-                    domProps: { value: _vm.fields.email },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.$set(_vm.fields, "email", $event.target.value)
-                      }
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "invalid-feedback small" }, [
-                    _vm._v(_vm._s(_vm.errors.email[0]))
-                  ])
-                ])
-              ])
-            : _c("div", { staticClass: "form-group" }, [
-                _c("div", { staticClass: "input-group" }, [
-                  _vm._m(4),
-                  _vm._v(" "),
-                  _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.fields.email,
-                        expression: "fields.email"
-                      }
-                    ],
-                    staticClass: "form-control",
-                    attrs: {
-                      type: "email",
-                      id: "email",
-                      name: "email",
-                      placeholder: "sample@joncable.com"
-                    },
-                    domProps: { value: _vm.fields.email },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.$set(_vm.fields, "email", $event.target.value)
-                      }
-                    }
-                  })
-                ])
-              ]),
-          _vm._v(" "),
-          _vm.errors && _vm.errors.message
-            ? _c("div", { staticClass: "form-group has-danger" }, [
-                _c("div", { staticClass: "input-group" }, [
-                  _vm._m(5),
-                  _vm._v(" "),
-                  _c("textarea", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.fields.message,
-                        expression: "fields.message"
-                      }
-                    ],
-                    staticClass: "form-control is-invalid",
-                    attrs: {
-                      name: "message",
-                      id: "message",
-                      placeholder: "Message..."
-                    },
-                    domProps: { value: _vm.fields.message },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.$set(_vm.fields, "message", $event.target.value)
-                      }
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "invalid-feedback small" }, [
-                    _vm._v(_vm._s(_vm.errors.message[0]))
-                  ])
-                ])
-              ])
-            : _c("div", { staticClass: "form-group" }, [
-                _c("div", { staticClass: "input-group" }, [
-                  _vm._m(6),
-                  _vm._v(" "),
-                  _c("textarea", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.fields.message,
-                        expression: "fields.message"
-                      }
-                    ],
-                    staticClass: "form-control",
-                    attrs: {
-                      name: "message",
-                      id: "message",
-                      placeholder: "Message..."
-                    },
-                    domProps: { value: _vm.fields.message },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.$set(_vm.fields, "message", $event.target.value)
-                      }
-                    }
-                  })
-                ])
-              ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "form-group" }, [
-            _c("div", {
-              staticClass: "g-recaptcha",
-              attrs: { "data-sitekey": _vm.captchaData }
-            }),
-            _vm._v(" "),
-            _vm.errors && _vm.errors.message
-              ? _c("div", [
-                  _c("div", { staticClass: "invalid-feedback small" }, [
-                    _vm._v(_vm._s(_vm.errors.message[0]))
-                  ])
-                ])
-              : _vm._e()
-          ]),
-          _vm._v(" "),
-          _vm._m(7)
-        ])
-      ])
-    ]
-  )
+    assertLoaded: function assertLoaded() {
+      if (!deferred.resolved()) {
+        throw new Error('ReCAPTCHA has not been loaded');
+      }
+    }
+  };
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card-header p-0" }, [
-      _c(
-        "div",
-        { staticClass: "bg-secondary text-white-50 text-center py-2" },
-        [_c("h6", [_vm._v("Do you want to chat about an opportunity?")])]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "input-group-prepend" }, [
-      _c("div", { staticClass: "input-group-text" }, [
-        _c("i", { staticClass: "fa fa-user text-danger" })
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "input-group-prepend" }, [
-      _c("div", { staticClass: "input-group-text" }, [
-        _c("i", { staticClass: "fa fa-user text-dark" })
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "input-group-prepend" }, [
-      _c("div", { staticClass: "input-group-text" }, [
-        _c("i", { staticClass: "fa fa-envelope text-danger" })
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "input-group-prepend" }, [
-      _c("div", { staticClass: "input-group-text" }, [
-        _c("i", { staticClass: "fa fa-envelope text-dark" })
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "input-group-prepend" }, [
-      _c("div", { staticClass: "input-group-text" }, [
-        _c("i", { staticClass: "fa fa-comment text-danger" })
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "input-group-prepend" }, [
-      _c("div", { staticClass: "input-group-text" }, [
-        _c("i", { staticClass: "fa fa-comment text-dark" })
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "text-center" }, [
-      _c("input", {
-        staticClass: "btn btn-outline-secondary btn-block rounded-0 py-2",
-        attrs: { type: "submit", value: "Contact Me" }
-      })
-    ])
+
+var recaptcha = createRecaptcha();
+
+if (typeof window !== 'undefined') {
+  window.vueRecaptchaApiLoaded = recaptcha.notify;
+}
+
+var _extends = Object.assign || function (target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i];
+
+    for (var key in source) {
+      if (Object.prototype.hasOwnProperty.call(source, key)) {
+        target[key] = source[key];
+      }
+    }
   }
-]
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
+
+  return target;
+};
+
+var VueRecaptcha = {
+  name: 'VueRecaptcha',
+  props: {
+    sitekey: {
+      type: String,
+      required: true
+    },
+    theme: {
+      type: String
+    },
+    badge: {
+      type: String
+    },
+    type: {
+      type: String
+    },
+    size: {
+      type: String
+    },
+    tabindex: {
+      type: String
+    }
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    recaptcha.checkRecaptchaLoad();
+    var opts = _extends({}, this.$props, {
+      callback: this.emitVerify,
+      'expired-callback': this.emitExpired
+    });
+    var container = this.$slots.default ? this.$el.children[0] : this.$el;
+    recaptcha.render(container, opts, function (id) {
+      _this.$widgetId = id;
+      _this.$emit('render', id);
+    });
+  },
+
+  methods: {
+    reset: function reset() {
+      recaptcha.reset(this.$widgetId);
+    },
+    execute: function execute() {
+      recaptcha.execute(this.$widgetId);
+    },
+    emitVerify: function emitVerify(response) {
+      this.$emit('verify', response);
+    },
+    emitExpired: function emitExpired() {
+      this.$emit('expired');
+    }
+  },
+  render: function render(h) {
+    return h('div', {}, this.$slots.default);
+  }
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (VueRecaptcha);
+
+
+/***/ }),
+/* 233 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function(){},staticRenderFns:[]}
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
@@ -64625,7 +64511,7 @@ if (false) {
 }
 
 /***/ }),
-/* 233 */
+/* 234 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

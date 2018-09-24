@@ -50,8 +50,6 @@
             </div>
         </div>
 
-        @include('partials/pdf')
-
         <!-- Example row of columns -->
         <div class="row">
 
@@ -71,7 +69,7 @@
                     <div class="card-body">
                         <h3 class="text-center text-black-50">Projects</h3>
                         <p class="card-text">From Web to LEDs finding ways to apply creative use of technology is really fun.</p>
-                        <div class="text-center"><a href="/projects" class="btn btn-outline-secondary">Explore My Projects</a></div>
+                        <div class="text-center"><a href="#" class="btn btn-outline-secondary">Coming Soon!</a></div>
                     </div>
                 </div>
             </div>

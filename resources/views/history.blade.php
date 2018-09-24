@@ -45,9 +45,6 @@
             <div class="col-2 text-black-50 text-right h5">
                 <a v-scroll-to="'#top'"><i class="fa fa-arrow-circle-up"></i></a>
             </div>
-            <div class="col-12 col-lg-1 col-md-1">
-                <img src="/media/edu/devry.png" class="img-thumbnail image-thumb shake" />
-            </div>
             <div class="col-6 col-lg-6 col-md-6 text-black-50">
                 <span class="font-weight-bold" >Software Architect</span><br/> <span class="small font-weight-light">Nov '15 – Present</span>
             </div>
@@ -69,9 +66,6 @@
             </div>
             <div class="col-2 text-black-50 text-right h5">
                 <a v-scroll-to="'#top'"><i class="fa fa-arrow-circle-up"></i></a>
-            </div>
-            <div class="col-12 col-lg-1 col-md-1">
-                <img src="/media/edu/devry.png" class="img-thumbnail image-thumb shake" />
             </div>
             <div class="col-6 col-lg-6 col-md-6 text-black-50">
                 <span class="font-weight-bold" >Technical Consultant</span><br/> <span class="small font-weight-light">Oct '14 – Nov '15</span>
@@ -96,9 +90,6 @@
             <div class="col-2 text-black-50 text-right h5">
                 <a v-scroll-to="'#top'"><i class="fa fa-arrow-circle-up"></i></a>
             </div>
-            <div class="col-12 col-lg-1 col-md-1">
-                <img src="/media/edu/devry.png" class="img-thumbnail image-thumb shake" />
-            </div>
             <div class="col-6 col-lg-6 col-md-6 text-black-50">
                 <span class="font-weight-bold" >Director Development & Design</span><br/> <span class="small font-weight-light">Oct '13 – Oct '14</span>
             </div>
@@ -121,9 +112,6 @@
             </div>
             <div class="col-2 text-black-50 text-right h5">
                 <a v-scroll-to="'#top'"><i class="fa fa-arrow-circle-up"></i></a>
-            </div>
-            <div class="col-12 col-lg-1 col-md-1">
-                <img src="/media/edu/devry.png" class="img-thumbnail image-thumb shake" />
             </div>
             <div class="col-6 col-lg-6 col-md-6 text-black-50">
                 <span class="font-weight-bold" >Technical Director</span> <span class="small">Partner</span><br/> <span class="small font-weight-light">May '09 – Oct '13</span>
@@ -148,9 +136,6 @@
             <div class="col-2 text-black-50 text-right h5">
                 <a v-scroll-to="'#top'"><i class="fa fa-arrow-circle-up"></i></a>
             </div>
-            <div class="col-12 col-lg-1 col-md-1">
-                <img src="/media/edu/devry.png" class="img-thumbnail image-thumb shake" />
-            </div>
             <div class="col-6 col-lg-6 col-md-6 text-black-50">
                 <span class="font-weight-bold" >Web & Technical Manager</span><br/> <span class="small font-weight-light">May '04 – May '09</span>
             </div>
@@ -173,9 +158,6 @@
             </div>
             <div class="col-2 text-black-50 text-right h5">
                 <a v-scroll-to="'#top'"><i class="fa fa-arrow-circle-up"></i></a>
-            </div>
-            <div class="col-12 col-lg-1 col-md-1">
-                <img src="/media/edu/devry.png" class="img-thumbnail image-thumb shake" />
             </div>
             <div class="col-6 col-lg-6 col-md-6 text-black-50">
                 <span class="font-weight-bold" >Web & Technical Manager</span><br/> <span class="small font-weight-light">May '01 – Aug '02</span>

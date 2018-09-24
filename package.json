@@ -25,6 +25,8 @@
     "font-awesome": "^4.7.0",
     "jquery.timeliny": "^1.0.2",
     "popper.js": "^1.14.3",
+    "recaptcha": "^1.2.1",
+    "vue-recaptcha": "^1.1.1",
     "vue-scrollto": "^2.11.0",
     "vue-typer": "^1.2.0"
   }

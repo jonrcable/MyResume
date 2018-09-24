@@ -10,10 +10,10 @@
         <div class="collapse navbar-collapse" id="mainmenu">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item align-links">
-                    <a class="nav-link" href="/technology">Technology </a>
+                    <a class="nav-link" href="/">Home </a>
                 </li>
                 <li class="nav-item align-links">
-                    <a class="nav-link" href="/projects">Projects </a>
+                    <a class="nav-link" href="/technology">Technology </a>
                 </li>
                 <li class="nav-item align-links">
                     <a class="nav-link" href="/history">History </a>
@@ -22,10 +22,7 @@
                     <a class="nav-link" href="/education">Education </a>
                 </li>
                 <li class="nav-item align-links">
-                    <a class="nav-link" href="/contact">Contact </a>
-                </li>
-                <li class="nav-item align-links">
-                    <a class="nav-link" href="#">View <i class="fa fa-file-pdf-o" aria-hidden="true"></i> pdf </a>
+                    <a class="nav-link" href="https://www.linkedin.com/in/joncable" target="_blank">Contact </a>
                 </li>
             </ul>
         </div>

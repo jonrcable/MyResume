@@ -15,29 +15,13 @@
             <div class="col-sm-6">
                 <div class="left">
 
-                    <!-- Facebook -->
-                    <a class="fb-ic">
-                        <i class="fa fa-facebook fa-lg text-muted mr-md-5 mr-3"> </i>
-                    </a>
-                    <!-- Twitter -->
-                    <a class="tw-ic">
-                        <i class="fa fa-twitter fa-lg text-muted mr-md-5 mr-3"> </i>
-                    </a>
-                    <!-- Google +-->
-                    <a class="gplus-ic">
-                        <i class="fa fa-google-plus fa-lg text-muted mr-md-5 mr-3"> </i>
-                    </a>
                     <!--Linkedin -->
                     <a class="li-ic">
-                        <i class="fa fa-linkedin fa-lg text-muted mr-md-5 mr-3"> </i>
+                        <a href="https://www.linkedin.com/in/joncable/" target="_blank"><i class="fa fa-linkedin fa-lg text-muted mr-md-5 mr-3"> </i></a>
                     </a>
-                    <!--Instagram-->
+                    <!--Github-->
                     <a class="ins-ic">
-                        <i class="fa fa-instagram fa-lg text-muted mr-md-5 mr-3"> </i>
-                    </a>
-                    <!--Pinterest-->
-                    <a class="pin-ic">
-                        <i class="fa fa-pinterest fa-lg text-muted"> </i>
+                        <a href="https://github.com/jonrcable" target="_blank" ><i class="fa fa-github fa-lg text-muted mr-md-5 mr-3"> </i></a>
                     </a>
                 </div>
             </div>

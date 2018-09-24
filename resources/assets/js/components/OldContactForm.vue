@@ -87,10 +87,7 @@
                     </div>
 
                     <div class="form-group">
-                        <vue-recaptcha
-                            ref="recaptcha"
-                            @verify="onVerify"
-                            sitekey="{{ config('services.recaptcha.key') }}"></vue-recaptcha>
+                        <div id="g-recaptcha" class="g-recaptcha" :data-sitekey="captchaData" v-model="fields.recaptcha"></div>
                         <div v-if="errors && errors.recaptcha">
                             <div class="small text-danger">{{ errors.recaptcha[0] }} </div>
                         </div>
@@ -108,37 +105,32 @@
 </template>
 
 <script>
-
     console.log('Webpacked Assets.');
-    import VueRecaptcha from 'vue-recaptcha';
-
     export default {
-        components: { VueRecaptcha },
         data() {
             return {
-                post: {
-                    title: '',
-                    body: '',
-                    recaptcha: '',
-                },
-                errors: [],
-                fields: {},
-                success: false,
-                loaded: true,
-                action: '/incoming',
-                rcapt_id: 1
+              fields: {},
+              errors: {},
+              success: false,
+              loaded: true,
+              action: '/incoming',
+              widgetId: 0
             }
         },
         props: ['captchaData'],
         methods: {
-
             submit() {
               if (this.loaded) {
                 this.loaded = false;
                 this.success = false;
                 this.errors = {};
-                g_recaptcha_response = window.grecaptcha.getResponse(this.rcapt_id);
-                console.log(g_recaptcha_response);
+
+                if (window.grecaptcha) {
+                    window.grecaptcha.execute(this.widgetId);
+                }else{
+                    console.log('lost it');
+                }
+
                 console.log(this.fields);
                 axios.post(this.action, this.fields).then(response => {
                   this.fields = {}; //Clear input fields.
@@ -153,38 +145,9 @@
                 });
               }
             },
-            onVerify(response) {
-               this.post.recaptcha = response;
-            },
-            addPost()
-            {
-                 axios
-                    .post(this.action, this.post, {
-                    headers:{
-                        'Content-Type':'application/json',
-                        'Accept':'application/json'
-                    }
-                })
-                .then(({data: {post}}) => {
-                    $("#addPost").modal("hide");
-                    this.errors = [];
-                    this.$refs.recaptcha.reset();
-                })
-                .catch(error => {
-                    if(error)
-                    {
-                        this.errors = error.response.data.errors;
-                    }
-                });
-            }
-
         },
-        mounted: function() {
-
-            console.log(this.captchaData);
-
+        mounted() {
+            console.log('Form Component Mounted.');
         }
-
     }
-
 </script>
