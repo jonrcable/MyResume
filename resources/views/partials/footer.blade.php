@@ -13,15 +13,15 @@
 
             <!-- Grid column -->
             <div class="col-sm-6">
-                <div class="left">
+                <div class="left float-right">
 
                     <!--Linkedin -->
                     <a class="li-ic">
-                        <a href="https://www.linkedin.com/in/joncable/" target="_blank"><i class="fa fa-linkedin fa-lg text-muted mr-md-5 mr-3"> </i></a>
+                        <a href="https://www.linkedin.com/in/joncable/" target="_blank"><i class="fa fa-linkedin fa-lg text-muted mr-md-5 mr-1"> </i></a>
                     </a>
                     <!--Github-->
                     <a class="ins-ic">
-                        <a href="https://github.com/jonrcable" target="_blank" ><i class="fa fa-github fa-lg text-muted mr-md-5 mr-3"> </i></a>
+                        <a href="https://github.com/jonrcable" target="_blank" ><i class="fa fa-github fa-lg text-muted"> </i></a>
                     </a>
                 </div>
             </div>
