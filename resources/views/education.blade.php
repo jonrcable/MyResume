@@ -134,7 +134,7 @@
 
     <div class="container">
 
-        @include('partials/form')
+        <hr class="style-transparent">
 
     </div> <!-- /container -->
 @endsection

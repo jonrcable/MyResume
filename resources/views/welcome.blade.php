@@ -85,7 +85,11 @@
             </div>
         </div>
 
-        @include('partials/form')
+        <div class="container">
+
+            <hr class="style-transparent">
+
+        </div> <!-- /container -->
 
     </div> <!-- /container -->
 @endsection
