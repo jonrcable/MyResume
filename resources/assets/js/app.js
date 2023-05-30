@@ -27,15 +27,12 @@ Vue.use(VueScrollTo);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-// Vue.component('example-component', require('./components/Example.vue'));
-// homepage typer componet
-Vue.component('typer-component', require('./components/Typer.vue'));
-// homepage carosel component
-Vue.component('carousel-component', require('./components/Carousel.vue'));
-// add home cooked hack to hover text with animated.css
-Vue.component('animated-component', require('./components/Animated.vue'));
-// my own custom timeline component
-Vue.component('timeline-component', require('./components/Timeline.vue'));
+import Animated from './components/Animated.vue';
+Vue.component('animated-component', Animated);
+
+Vue.component("typer-component", () => import("./components/Typer.vue"));
+Vue.component("carousel-component", () => import("./components/Carousel.vue"));
+Vue.component("timeline-component", () => import("./components/Timeline.vue"));
 
 // start the vue app
 const app = new Vue({
