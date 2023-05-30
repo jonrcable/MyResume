@@ -26,9 +26,6 @@
       <b-carousel-slide text="Exploring robotics and sensor integration with ARM, ROS and Python."
                         img-src="/media/sliderhome_ros.png">
       </b-carousel-slide>
-      <b-carousel-slide text="Anything is possible when you have the right people to support you."
-                        img-src="/media/sliderhome_chuley.png">
-      </b-carousel-slide>
 
     </b-carousel>
 
