@@ -13,12 +13,12 @@
                 var animation = $el.attr('animation');
 
                 $el.mouseenter(function(event) {
-                    $el.addClass("animated").addClass(animation);
+                    $el.addClass("animate__animated").addClass(animation);
                 });
 
                 $el.on("webkitAnimationEnd mozAnimationEnd oAnimationEnd animationEnd", function(event) {
                     setTimeout(function(event) {
-                        $el.removeClass("animated").removeClass(animation)
+                        $el.removeClass("animate__animated").removeClass(animation)
                     }, 1000);
                 });
             });

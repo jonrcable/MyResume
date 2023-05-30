@@ -27,7 +27,7 @@
 
         <div class="row mt-3">
             <div class="col-sm-12 text-black-50">
-                <h2 class="h3 animated-hover" id="startups" animation="jackInTheBox">resume.history (startups)</h2>
+                <h2 class="h3 animated-hover" id="startups" animation="animate__jackInTheBox">resume.history (startups)</h2>
                 <p>
                     I immediately found my passion after building my first 286 machine and logging-on on at 2400bps. As a professional, it has been an amazing journey to watch technology evolve right before your eyes.
                 </p>
