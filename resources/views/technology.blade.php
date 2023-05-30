@@ -66,26 +66,26 @@
                 <a v-scroll-to="'#top'"><i class="fa fa-arrow-circle-up"></i></a>
             </div>
             <div class="col-12 col-lg-3 col-md-6 col-sm-6 col-xs-12 text-black-50 text-center">
-                <span class="shake">
-                    <img src="/media/skills/php.png" /> <br />
+                <span>
+                    <img src="/media/skills/php.png" class="animated-hover" animation="animate__bounce" /> <br />
                     <small>PHP</small>
                 </span>
             </div>
             <div class="col-12 col-lg-3 col-md-6 col-sm-6 col-xs-12 text-black-50 text-center">
-                <span class="shake">
-                    <img src="/media/skills/python.png" /> <br />
+                <span>
+                    <img src="/media/skills/python.png" class="animated-hover" animation="animate__bounce" /> <br />
                     <small>Python</small>
                 </span>
             </div>
             <div class="col-12 col-lg-3 col-md-6 col-sm-6 col-xs-12 text-black-50 text-center">
-                <span class="shake">
-                    <img src="/media/skills/jquery.png" /> <br />
+                <span>
+                    <img src="/media/skills/jquery.png" class="animated-hover" animation="animate__bounce" /> <br />
                     <small>Javascript</small>
                 </span>
             </div>
             <div class="col-12 col-lg-3 col-md-6 col-sm-6 col-xs-12 text-black-50 text-center">
-                <span class="shake">
-                    <img src="/media/skills/perl.png" /> <br />
+                <span>
+                    <img src="/media/skills/perl.png" class="animated-hover" animation="animate__bounce" /> <br />
                     <small>Perl</small>
                 </span>
             </div>
@@ -100,26 +100,26 @@
                 <a v-scroll-to="'#top'"><i class="fa fa-arrow-circle-up"></i></a>
             </div>
             <div class="col-12 col-lg-3 col-md-6 col-sm-6 col-xs-12 text-black-50 text-center">
-                <span class="shake">
-                    <img src="/media/skills/laravel.png" /> <br />
+                <span>
+                    <img src="/media/skills/laravel.png" class="animated-hover" animation="animate__bounce" /> <br />
                     <small>Laravel</small>
                 </span>
             </div>
             <div class="col-12 col-lg-3 col-md-6 col-sm-6 col-xs-12 text-black-50 text-center">
-                <span class="shake">
-                    <img src="/media/skills/flask.png" /> <br />
+                <span>
+                    <img src="/media/skills/flask.png" class="animated-hover" animation="animate__bounce" /> <br />
                     <small>Flask</small>
                 </span>
             </div>
             <div class="col-12 col-lg-3 col-md-6 col-sm-6 col-xs-12 text-black-50 text-center">
-                <span class="shake">
-                    <img src="/media/skills/vuejs.png" /> <br />
+                <span>
+                    <img src="/media/skills/vuejs.png" class="animated-hover" animation="animate__bounce" /> <br />
                     <small>Vue.JS</small>
                 </span>
             </div>
             <div class="col-12 col-lg-3 col-md-6 col-sm-6 col-xs-12 text-black-50 text-center">
-                <span class="shake">
-                    <img src="/media/skills/ros.png" /> <br />
+                <span>
+                    <img src="/media/skills/ros.png" class="animated-hover" animation="animate__bounce" /> <br />
                     <small>Robotics Operating System</small>
                 </span>
             </div>
@@ -134,26 +134,26 @@
                 <a v-scroll-to="'#top'"><i class="fa fa-arrow-circle-up"></i></a>
             </div>
             <div class="col-12 col-lg-3 col-md-6 col-sm-6 col-xs-12 text-black-50 text-center">
-                <span class="shake">
-                    <img src="/media/skills/osx.png" /> <br />
+                <span>
+                    <img src="/media/skills/osx.png" class="animated-hover" animation="animate__bounce" /> <br />
                     <small>OSX</small>
                 </span>
             </div>
             <div class="col-12 col-lg-3 col-md-6 col-sm-6 col-xs-12 text-black-50 text-center">
-                <span class="shake">
-                    <img src="/media/skills/windows.png" /> <br />
+                <span>
+                    <img src="/media/skills/windows.png" class="animated-hover" animation="animate__bounce" /> <br />
                     <small>Windows</small>
                 </span>
             </div>
             <div class="col-12 col-lg-3 col-md-6 col-sm-6 col-xs-12 text-black-50 text-center">
-                <span class="shake">
-                    <img src="/media/skills/ubuntu.png" /> <br />
+                <span>
+                    <img src="/media/skills/ubuntu.png" class="animated-hover" animation="animate__bounce" /> <br />
                     <small>Ubuntu</small>
                 </span>
             </div>
             <div class="col-12 col-lg-3 col-md-6 col-sm-6 col-xs-12 text-black-50 text-center">
-                <span class="shake">
-                    <img src="/media/skills/centos.png" /> <br />
+                <span>
+                    <img src="/media/skills/centos.png" class="animated-hover" animation="animate__bounce" /> <br />
                     <small>CentOS</small>
                 </span>
             </div>
@@ -168,26 +168,26 @@
                 <a v-scroll-to="'#top'"><i class="fa fa-arrow-circle-up"></i></a>
             </div>
             <div class="col-12 col-lg-3 col-md-6 col-sm-6 col-xs-12 text-black-50 text-center">
-                <span class="shake">
-                    <img src="/media/skills/jetbrains.png" /> <br />
+                <span>
+                    <img src="/media/skills/jetbrains.png" class="animated-hover" animation="animate__bounce" /> <br />
                     Jetbrians <br ><small>PHPStorm/PyCharm</small>
                 </span>
             </div>
             <div class="col-12 col-lg-3 col-md-6 col-sm-6 col-xs-12 text-black-50 text-center">
-                <span class="shake">
-                    <img src="/media/skills/adobe.png" /> <br />
+                <span>
+                    <img src="/media/skills/adobe.png" class="animated-hover" animation="animate__bounce" /> <br />
                     <small>Adobe Creative</small>
                 </span>
             </div>
             <div class="col-12 col-lg-3 col-md-6 col-sm-6 col-xs-12 text-black-50 text-center">
-                <span class="shake">
-                    <img src="/media/skills/gsuite.png" /> <br />
+                <span>
+                    <img src="/media/skills/gsuite.png" class="animated-hover" animation="animate__bounce" /> <br />
                     <small>Google Apps</small>
                 </span>
             </div>
             <div class="col-12 col-lg-3 col-md-6 col-sm-6 col-xs-12 text-black-50 text-center">
-                <span class="shake">
-                    <img src="/media/skills/git.png" /> <br />
+                <span>
+                    <img src="/media/skills/git.png" class="animated-hover" animation="animate__bounce" /> <br />
                     <small>Git</small>
                 </span>
             </div>
@@ -202,26 +202,26 @@
                 <a v-scroll-to="'#top'"><i class="fa fa-arrow-circle-up"></i></a>
             </div>
             <div class="col-12 col-lg-3 col-md-6 col-sm-6 col-xs-12 text-black-50 text-center">
-                <span class="shake">
-                    <img src="/media/skills/aws.png" /> <br />
+                <span>
+                    <img src="/media/skills/aws.png" class="animated-hover" animation="animate__bounce" /> <br />
                     <small>Amazon AWS</small>
                 </span>
             </div>
             <div class="col-12 col-lg-3 col-md-6 col-sm-6 col-xs-12 text-black-50 text-center">
-                <span class="shake">
-                    <img src="/media/skills/linode.png" /> <br />
+                <span>
+                    <img src="/media/skills/linode.png" class="animated-hover" animation="animate__bounce" /> <br />
                     <small>Linode</small>
                 </span>
             </div>
             <div class="col-12 col-lg-3 col-md-6 col-sm-6 col-xs-12 text-black-50 text-center">
-                <span class="shake">
-                    <img src="/media/skills/whm.png" /> <br />
+                <span>
+                    <img src="/media/skills/whm.png" class="animated-hover" animation="animate__bounce" /> <br />
                     <small>cPanel/WHM</small>
                 </span>
             </div>
             <div class="col-12 col-lg-3 col-md-6 col-sm-6 col-xs-12 text-black-50 text-center">
-                <span class="shake">
-                    <img src="/media/skills/wpengine.png" /> <br />
+                <span>
+                    <img src="/media/skills/wpengine.png" class="animated-hover" animation="animate__bounce" /> <br />
                     <small>WP Engine</small>
                 </span>
             </div>
@@ -236,26 +236,26 @@
                 <a v-scroll-to="'#top'"><i class="fa fa-arrow-circle-up"></i></a>
             </div>
             <div class="col-12 col-lg-3 col-md-6 col-sm-6 col-xs-12 text-black-50 text-center">
-                <span class="shake">
-                    <img src="/media/skills/video.png" /> <br />
+                <span>
+                    <img src="/media/skills/video.png" class="animated-hover" animation="animate__bounce" /> <br />
                     <small>Video <br > (FFMPEG | OpenCV)</small>
                 </span>
             </div>
             <div class="col-12 col-lg-3 col-md-6 col-sm-6 col-xs-12 text-black-50 text-center">
-                <span class="shake">
-                    <img src="/media/skills/photoscan.png" /> <br />
+                <span>
+                    <img src="/media/skills/photoscan.png" class="animated-hover" animation="animate__bounce" /> <br />
                     <small>Photogrammetry <br> (PhotoScan, Pix4D</small>
                 </span>
             </div>
             <div class="col-12 col-lg-3 col-md-6 col-sm-6 col-xs-12 text-black-50 text-center">
-                <span class="shake">
-                    <img src="/media/skills/arm.png" /> <br />
+                <span>
+                    <img src="/media/skills/arm.png" class="animated-hover" animation="animate__bounce" /> <br />
                     <small>ARM <br> (Nvidia TX1/2 | HummingBoard | RaspberryPi)</small>
                 </span>
             </div>
             <div class="col-12 col-lg-3 col-md-6 col-sm-6 col-xs-12 text-black-50 text-center">
-                <span class="shake">
-                    <img src="/media/skills/hardware.png" /> <br />
+                <span>
+                    <img src="/media/skills/hardware.png" class="animated-hover" animation="animate__bounce" /> <br />
                     <small>Microcontrollers <br > (Arduino | Teensy | STM32)</small>
                 </span>
 
