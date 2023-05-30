@@ -8,7 +8,7 @@
 // updated to v4.4.1
 require('./bootstrap');
 
-window.Vue = require('vue');
+window.Vue = require('vue').default;
 window.Popper = require('popper.js').default;
 
 // additional NPM components
@@ -36,8 +36,6 @@ Vue.component('carousel-component', require('./components/Carousel.vue'));
 Vue.component('animated-component', require('./components/Animated.vue'));
 // my own custom timeline component
 Vue.component('timeline-component', require('./components/Timeline.vue'));
-// contact form component
-Vue.component('contact-component', require('./components/ContactForm.vue'));
 
 // start the vue app
 const app = new Vue({
