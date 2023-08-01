@@ -34,9 +34,31 @@
             </div>
         </div>
 
-        <span id="agellus"></span>
+        <span id="deedclaim"></span>
 
         <timeline-component></timeline-component>
+
+        <div class="row mt-4">
+            <div class="col-10 text-black-50">
+                <h3 class="h5">DeedClaim</h3>
+            </div>
+            <div class="col-2 text-black-50 text-right h5">
+                <a v-scroll-to="'#top'"><i class="fa fa-arrow-circle-up"></i></a>
+            </div>
+            <div class="col-6 col-lg-6 col-md-6 text-black-50">
+                <span class="font-weight-bold" >Software Architect</span><br/> <span class="small font-weight-light">Aug '18 – June '23</span>
+            </div>
+            <div class="col-6 col-lg-5 col-md-5 small">
+                Automated Legal Services <br> <span class="text-black-50">Austin, Texas </span>
+            </div>
+            <div class="col-12 mt-2 text-black-50 font-italic small">
+                <span>Highlights: PHP, Laravel, Vue, Wordpress, GravityForms, AWS, CloudFlare</span>
+            </div>
+            <div class="col-12 mt-2 font-weight-light">
+                DeedClaim provides self service document automation for the evolving legal industry. The product involved thoughtful architecture, development and technical management for generating real estate and ancillary across a range a complex legal requirements in all 50 states.
+            </div>
+            <span id="agellus"></span>
+        </div>
 
         <div class="row mt-4">
             <div class="col-10 text-black-50">
@@ -46,7 +68,7 @@
                 <a v-scroll-to="'#top'"><i class="fa fa-arrow-circle-up"></i></a>
             </div>
             <div class="col-6 col-lg-6 col-md-6 text-black-50">
-                <span class="font-weight-bold" >Software Architect</span><br/> <span class="small font-weight-light">Nov '15 – Present</span>
+                <span class="font-weight-bold" >Software Architect</span><br/> <span class="small font-weight-light">Nov '15 – Aug '18</span>
             </div>
             <div class="col-6 col-lg-5 col-md-5 small">
                 Industrial Engineering <br> <span class="text-black-50">Austin, Texas </span>

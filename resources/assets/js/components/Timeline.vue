@@ -4,8 +4,11 @@
 
         <div class="row small text-white text-center mb-4">
 
+            <div class="col-4 col-lg-1 col-md-1 col-sm-1 text-center">
+                <a v-on:click="gotimeline('DeedClaim', 'Software Architect', 'Aug \'18 – June \'23', 'Legal Services', 'Austin Texas', 'deedclaim')">2023</a>
+            </div>
             <div class="col-4 col-lg-2 col-md-2 col-sm-2 text-center">
-                <a v-on:click="gotimeline('Agellus Engineering', 'Software Architect', 'Nov \'15 – Present', 'Industrial Engineering', 'Austin Texas', 'agellus')">2018</a>
+                <a v-on:click="gotimeline('Agellus Engineering', 'Software Architect', 'Nov \'15 – Aug \'18', 'Industrial Engineering', 'Austin Texas', 'agellus')">2018</a>
             </div>
             <div class="col-4 col-lg-2 col-md-2 col-sm-2 text-center" >
                 <a v-on:click="gotimeline('SPC Direct', 'Technical Consultant', 'Oct \'14 – Nov \'15', 'Digital Marketing ', 'Austin Texas', 'spcdirect')">2014</a>
@@ -19,7 +22,7 @@
             <div class="col-4 col-lg-2 col-md-2 col-sm-2 text-center" >
                 <a v-on:click="gotimeline('Publications and Communications', 'Web & Technical Manager', 'May \'04 – May \'09', 'Online Publishing', 'Austin Texas', 'pcinews')">2004</a>
             </div>
-            <div class="col-4 col-lg-2 col-md-2 col-sm-2 text-center" >
+            <div class="col-4 col-lg-1 col-md-1 col-sm-1 text-center" >
                 <a v-on:click="gotimeline('Able Management Company', 'Web & Technical Manager', 'May \'01 – Aug \'02', 'Ecommerce', 'Huntsville Texas', 'ableammo')">2001</a>
             </div>
 
@@ -97,12 +100,12 @@
         },
         data() {
             return {
-                company: "Agellus Engineering",
+                company: "DeedClaim",
                 title: "Software Architect",
-                date: "Nov '15 – Present",
-                industry: "Industrial Engineering",
+                date: "Aug '18 – June '23",
+                industry: "Legal Services",
                 location: "Austin, Texas",
-                link: "#agellus"
+                link: "#deedclaim"
             }
         },
         mounted(link) {
