@@ -5,15 +5,15 @@
         <div class="row mt-2 mb-2">
 
             <!-- Grid column -->
-            <div class="col-sm-6 mb-2">
+            <div class="col-6 mb-2">
 
                 @yield('footer-msg')
 
             </div>
 
             <!-- Grid column -->
-            <div class="col-sm-6">
-                <div class="left float-right">
+            <div class="col-6">
+                <div class="float-right">
 
                     <!--Linkedin -->
                     <a class="li-ic">

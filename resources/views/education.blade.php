@@ -140,7 +140,7 @@
 @endsection
 
 @section('footer-msg')
-    <span class="text-muted">
-        Built using Laravel, Bootstrap and Vue.js
+    <span class="text-muted small">
+        Laravel, Bootstrap and Vue.js
     </span>
 @endsection
