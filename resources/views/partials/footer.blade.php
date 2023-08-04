@@ -14,14 +14,17 @@
             <!-- Grid column -->
             <div class="col-6">
                 <div class="float-right">
-
                     <!--Linkedin -->
                     <a class="li-ic">
                         <a href="https://www.linkedin.com/in/joncable/" target="_blank"><i class="fa fa-linkedin fa-lg text-muted mr-md-5 mr-1"> </i></a>
                     </a>
                     <!--Github-->
                     <a class="ins-ic">
-                        <a href="https://github.com/jonrcable" target="_blank" ><i class="fa fa-github fa-lg text-muted"> </i></a>
+                        <a href="https://github.com/jonrcable" target="_blank" ><i class="fa fa-github fa-lg text-muted mr-md-5 mr-1"> </i></a>
+                    </a>
+                    <!--PDF -->
+                    <a class="li-ic">
+                        <a href="https://drive.google.com/file/d/1A64IkSKEOcqMuDGrB0XGk3njRNU6wH1r/view?usp=sharing" target="_blank"><i class="fa fa-file-pdf-o fa-lg text-muted"> </i></a>
                     </a>
                 </div>
             </div>
