@@ -40,6 +40,6 @@
 
 @section('footer-msg')
     <span class="text-muted small">
-        Laravel, Bootstrap and Vue.js
+        <i class="fa fa-copyright"></i> {{ date('Y') }} Jon Cable
     </span>
 @endsection
