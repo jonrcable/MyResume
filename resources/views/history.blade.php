@@ -55,7 +55,7 @@
                 <span>Highlights: PHP, Laravel, Vue, Wordpress, GravityForms, AWS, CloudFlare</span>
             </div>
             <div class="col-12 mt-2 font-weight-light">
-                DeedClaim provides self service document automation for the evolving legal industry. The product involved thoughtful architecture, development and technical management for generating real estate and ancillary across a range a complex legal requirements in all 50 states.
+                DeedClaim provides self service document automation for the evolving legal industry. The product involved thoughtful architecture, development and technical management for generating real estate and ancillary documents across a range a complex legal requirements in all 50 states.
             </div>
             <span id="agellus"></span>
         </div>
