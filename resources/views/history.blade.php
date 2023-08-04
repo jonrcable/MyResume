@@ -36,7 +36,7 @@
 
         <span id="deedclaim"></span>
 
-        <timeline-component></timeline-component>
+        <timeline-component class="d-none d-lg-block"></timeline-component>
 
         <div class="row mt-4">
             <div class="col-10 text-black-50">
@@ -207,6 +207,6 @@
 
 @section('footer-msg')
     <span class="text-muted small">
-        Laravel, Bootstrap and Vue.js
+        <i class="fa fa-copyright"></i> {{ date('Y') }} Jon Cable
     </span>
 @endsection
