@@ -51,8 +51,10 @@ https://laravel.com/docs/10.x/sail#installation
 * su nameofwebuser (switch the user running nginx)
 * cd /path/to/ngnix/public_html
 * git clone git@github.com:jonrcable/MyResume.git (clone the repository to the root of the webserver (nginx) directory)
+* copy the .env.example to .env
 * composer install
 * php artisan key:generate
+* npm install
 * npm run prod
 
 Note: Be sure to the point the document root of the nginx configuration file to the /public folder
