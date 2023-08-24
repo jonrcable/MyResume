@@ -15,7 +15,45 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'My Resume'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | LinkedIn Profile
+    |--------------------------------------------------------------------------
+    |
+    | This value is the url to my LinkedIn Profile. This value is used when the
+    | framework needs to link out to your LinkedIn profile.
+    |
+    */
+
+    'linkedin' => env('RESUME_LINKEDIN', 'https://www.linkedin.com/in/joncable/'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | PDF Resume Link
+    |--------------------------------------------------------------------------
+    |
+    | This value is the url to my Google Drive containing the PDF copy of my
+    | resume. This value is used when the framework needs to link out to a
+    | downloadable PDF version of my resume.
+    |
+    */
+
+    'pdf' => env('RESUME_PDF', 'https://drive.google.com/file/d/1-T2qtF_TvVsW9-zyATpVTe13WNlv8i4R/view?usp=sharing'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Github Profile Link
+    |--------------------------------------------------------------------------
+    |
+    | This value is the url to my Github profile containing any public code
+    | you have available. This value is used when the framework needs to link
+    | out to a downloadable PDF.
+    |
+    */
+
+    'github' => env('RESUME_GITHUB', 'https://github.com/jonrcable'),
 
     /*
     |--------------------------------------------------------------------------

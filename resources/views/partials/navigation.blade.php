@@ -22,7 +22,7 @@
                     <a class="nav-link" href="/education">Education </a>
                 </li>
                 <li class="nav-item align-links">
-                    <a class="nav-link" href="https://www.linkedin.com/in/joncable" target="_blank">Contact </a>
+                    <a class="nav-link" href="{{ config('app.linkedin') }}" target="_blank">Contact </a>
                 </li>
             </ul>
         </div>
