@@ -29,7 +29,7 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', {{ config('app.GA4') }});
+        gtag('config', '{{ config('app.GA4') }}');
     </script>
 
 </head>
