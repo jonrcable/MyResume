@@ -8,6 +8,8 @@
 
 @section('page-crumbs')
 
+    <span id="top"></span>
+
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb bg-dark breadcrumb-fix">
             <li class="breadcrumb-item active" aria-current="page">Projects</li>
@@ -18,11 +20,14 @@
 
 @section('page-content')
 
+    <!-- If we have animations on this page -->
+    <animated-component></animated-component>
+
     <div class="container mb-5">
 
         <div class="row mt-3">
             <div class="col-sm-12 text-black-50">
-                <h2 class="h3">resume.projects (create)</h2>
+                <h2 class="h3 animated-hover" id="projects" animation="animate__jackInTheBox">resume.projects (create)</h2>
                 <p>
                     Always be creating and working towards a better version. Technology is always evolving, challenging
                     and we should have fun doing it. These are just a few of the passionate, growth-oriented and plain fun
@@ -61,10 +66,10 @@
             <div class="col-12 mt-2 font-weight-light">
                 <p>This project has played a vital role in my professional development career. A friend and I originally
                     started this project as everydayjunglist.com in 2003. We originally built it on a PHP open-source
-                    social networking platform for artists called JamRoom. As it grew to over a thousand artists, we
-                    decided to collect all the uploaded music into a playlist and stream it as a radio station using
-                    Shoutcast. Once we had the playlist built, we were asked by the community to add Live Audio
-                    Streaming and eventually Video Streaming.</p>
+                    social platform for artists called JamRoom. As it grew to over a thousand artists, we collected all
+                    the uploaded music into a playlist and streamed it as a radio station using Shoutcast. Once we had
+                    the playlist built, we were asked by the community to add Live Audio Streaming and eventually Video
+                    Streaming.</p>
                 <p>After several years and terabytes of music, the technical debt of gluing platforms together became
                     too much to manage and we decided to start from scratch at the bare bones. The current version of
                     the platform is entirely written in Python on Flask, Vue.js, and down to the core FFMPEG libraries.
@@ -74,7 +79,7 @@
             <span id="photogrammetry"></span>
         </div>
 
-        <div class="row mt-4">
+        <div class="row mt-2">
             <div class="col-10 text-black-50">
                 <h3 class="h5" id="aas">Professional Development</h3>
             </div>
@@ -91,11 +96,10 @@
                 <span>Highlights: </span><span>Survey, GPS, Cameras, Nvidia, TX1, ROS and 3D Modeling</span>
             </div>
             <div class="col-12 mt-2 font-weight-light">
-                I am highlighting this project because it's where I experienced the most growth as an engineer. I had
-                mostly worked in Web Development but soon found myself in a challenging R&D environment working on
-                Python APIs on ARM Processors down at the hardware level. I had been challenged by the
-                operating system level plenty but this experience led me further into working with low-latency
-                systems integration and connecting hardware with real-world sensors.
+                I am highlighting this project because it's where I experienced the most growth as an engineer. Prior to
+                this role I had mostly worked in LAMP Development but soon found myself in a challenging R&D environment
+                working on Python APIs on ARM Processors down at the hardware level. This experience led me further into
+                working with low-latency systems integration and connecting hardware with real-world sensors.
             </div>
             <span id="microcontroller"></span>
         </div>
@@ -117,11 +121,11 @@
                 <span>Highlights: </span><span>Arduino, RaspberryPi, Electronics, Soldering, LEDs, Sensors and Adventure</span>
             </div>
             <div class="col-12 mt-2 font-weight-light">
-                When I first started working in R&D I was working with some very talented C and electronics
-                engineers and needed to know enough to be able to work alongside them in the lab on Python API
-                development. The easiest way for me to do this was to get to work on some personal projects and start
-                building. What I found was a world of Adult Legos that was soothing and creative, I fell in love with
-                what I was doing and started building.
+                When I first started working in R&D I was working alongside some very talented C and electronics
+                engineers and wanted to be able to work comfortably with them in the lab on Python API
+                development. The easiest way for me to do this was to start soldering and working on some personal projects.
+                What I found was a world of Adult Legos that was soothing and creative, I fell in love with what I
+                was doing and started building.
             </div>
         </div>
 

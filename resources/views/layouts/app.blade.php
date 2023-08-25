@@ -22,6 +22,16 @@
     <!-- Google ReCaptcha -->
     <script src="https://www.google.com/recaptcha/api.js?&render=explicit" async defer></script>
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ config('app.GA4') }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', {{ config('app.GA4') }});
+    </script>
+
 </head>
 <body>
 
