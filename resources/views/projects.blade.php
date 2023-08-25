@@ -18,14 +18,110 @@
 
 @section('page-content')
 
-    <div class="container">
+    <div class="container mb-5">
 
         <div class="row mt-3">
             <div class="col-sm-12 text-black-50">
                 <h2 class="h3">resume.projects (create)</h2>
                 <p>
-                    From OS's to Bootloaders, AWS Cloud to Nvidia TX1's there is so much to do! Learning, troubleshooting and understanding is a journey that never ends; if you can get a little creative though it can always be fun.
+                    Always be creating and working towards a better version. Technology is always evolving, challenging
+                    and we should have fun doing it. These are just a few of the passionate, growth-oriented and plain fun
+                    adventures I have had in working in technology.
                 </p>
+            </div>
+        </div>
+
+        <div class="row mb-4 ml-1 text-black-50 d-none d-sm-block d-md-block d-lg-block d-xl-block">
+            <div class="btn-group flex-wrap" role="group" aria-label="education">
+                <button type="button" class="btn btn-secondary"><i class="fa fa-code"></i></button>
+                <button type="button" class="btn btn-outline-secondary" v-scroll-to="'#empirednb'">EmpireDnB.com</button>
+                <button type="button" class="btn btn-outline-secondary" v-scroll-to="'#microcontroller'">Microcontroller</button>
+                <button type="button" class="btn btn-outline-secondary" v-scroll-to="'#photogrammetry'">Photogrammetry</button>
+            </div>
+            <span id="empirednb"></span>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-10 text-black-50">
+                <h3 class="h5" id="bs">EmpireDnB.com</h3>
+            </div>
+            <div class="col-2 text-black-50 text-right h5">
+                <a v-scroll-to="'#top'"><i class="fa fa-arrow-circle-up"></i></a>
+            </div>
+            <div class="col-6 col-lg-6 col-md-6 text-black-50">
+                <span class="font-weight-bold" >Web Development</span><br/> <span class="small font-weight-light">
+                    <a href="https://www.empirednb.com" target="_blank">EmpireDnb.com</a></span>
+            </div>
+            <div class="col-6 col-lg-5 col-md-5 small">
+                2003 - Present<br/> <span class="small font-weight-light">Passion</span>
+            </div>
+            <div class="col-12 mt-2 text-black-50 font-italic small">
+                <span>Highlights: </span><span>Nginx, Python, Flask, Vue.js, Video Streaming</span>
+            </div>
+            <div class="col-12 mt-2 font-weight-light">
+                <p>This project has played a vital role in my professional development career. A friend and I originally
+                    started this project as everydayjunglist.com in 2003. We originally built it on a PHP open-source
+                    social networking platform for artists called JamRoom. As it grew to over a thousand artists, we
+                    decided to collect all the uploaded music into a playlist and stream it as a radio station using
+                    Shoutcast. Once we had the playlist built, we were asked by the community to add Live Audio
+                    Streaming and eventually Video Streaming.</p>
+                <p>After several years and terabytes of music, the technical debt of gluing platforms together became
+                    too much to manage and we decided to start from scratch at the bare bones. The current version of
+                    the platform is entirely written in Python on Flask, Vue.js, and down to the core FFMPEG libraries.
+                    We have streamed thousands of hours of live video with 100's unique videos in our on-demand library.
+                    This will always be a work-in-progress and non-revenue-based project just for fun, why not?</p>
+            </div>
+            <span id="photogrammetry"></span>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-10 text-black-50">
+                <h3 class="h5" id="aas">Professional Development</h3>
+            </div>
+            <div class="col-2 text-black-50 text-right h5">
+                <a v-scroll-to="'#top'"><i class="fa fa-arrow-circle-up"></i></a>
+            </div>
+            <div class="col-6 col-lg-6 col-md-6 text-black-50">
+                <span class="font-weight-bold">Photogrammetry</span><br/> <span class="small font-weight-light">More Soon</span>
+            </div>
+            <div class="col-6 col-lg-5 col-md-5 small">
+                Nov 2015 - Aug 2018 <br> <span class="text-black-50">Growth</span>
+            </div>
+            <div class="col-12 mt-2 text-black-50 font-italic small">
+                <span>Highlights: </span><span>Survey, GPS, Cameras, Nvidia, TX1, ROS and 3D Modeling</span>
+            </div>
+            <div class="col-12 mt-2 font-weight-light">
+                I am highlighting this project because it's where I experienced the most growth as an engineer. I had
+                mostly worked in Web Development but soon found myself in a challenging R&D environment working on
+                Python APIs on ARM Processors down at the hardware level. I had been challenged by the
+                operating system level plenty but this experience led me further into working with low-latency
+                systems integration and connecting hardware with real-world sensors.
+            </div>
+            <span id="microcontroller"></span>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-10 text-black-50">
+                <h3 class="h5" id="aas">Microcontroller Projects</h3>
+            </div>
+            <div class="col-2 text-black-50 text-right h5">
+                <a v-scroll-to="'#top'"><i class="fa fa-arrow-circle-up"></i></a>
+            </div>
+            <div class="col-6 col-lg-6 col-md-6 text-black-50">
+                <span class="font-weight-bold">Electronics</span><br/> <span class="small font-weight-light">More Soon</span>
+            </div>
+            <div class="col-6 col-lg-5 col-md-5 small">
+                Always <br> <span class="text-black-50">Fun</span>
+            </div>
+            <div class="col-12 mt-2 text-black-50 font-italic small">
+                <span>Highlights: </span><span>Arduino, RaspberryPi, Electronics, Soldering, LEDs, Sensors and Adventure</span>
+            </div>
+            <div class="col-12 mt-2 font-weight-light">
+                When I first started working in R&D I was working with some very talented C and electronics
+                engineers and needed to know enough to be able to work alongside them in the lab on Python API
+                development. The easiest way for me to do this was to get to work on some personal projects and start
+                building. What I found was a world of Adult Legos that was soothing and creative, I fell in love with
+                what I was doing and started building.
             </div>
         </div>
 
@@ -36,10 +132,11 @@
         <hr class="style-transparent">
 
     </div> <!-- /container -->
+
 @endsection
 
 @section('footer-msg')
-    <span class="text-muted small">
+            <span class="text-muted small">
         <i class="fa fa-copyright"></i> {{ date('Y') }} Jon Cable
     </span>
 @endsection

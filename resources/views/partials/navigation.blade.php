@@ -19,6 +19,9 @@
                     <a class="nav-link" href="/history">History </a>
                 </li>
                 <li class="nav-item align-links">
+                    <a class="nav-link" href="/projects">Projects </a>
+                </li>
+                <li class="nav-item align-links">
                     <a class="nav-link" href="/education">Education </a>
                 </li>
                 <li class="nav-item align-links">

@@ -68,8 +68,8 @@
                     <img class="card-img-top image-home shake" src="/media/projecthome.png" alt="Projects I have worked on">
                     <div class="card-body">
                         <h3 class="text-center text-black-50">Projects</h3>
-                        <p class="card-text">From Web to LEDs finding ways to apply creative use of technology is really fun.</p>
-                        <div class="text-center"><a href="#" class="btn btn-outline-secondary">Coming Soon!</a></div>
+                        <p class="card-text">From Web to LEDs finding ways to apply creative use of technology is fun.</p>
+                        <div class="text-center"><a href="/projects" class="btn btn-outline-secondary">Explore My Projects</a></div>
                     </div>
                 </div>
             </div>
