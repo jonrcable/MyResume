@@ -27,7 +27,7 @@
 
         <div class="row mt-3">
             <div class="col-sm-12 text-black-50">
-                <h2 class="h3 animated-hover" id="technology" animation="animate__jackInTheBox">resume.technology (skills)</h2>
+                <h1 class="h3 animated-hover" id="technology" animation="animate__jackInTheBox">resume.technology (skills)</h1>
                 <p>
                     This is an overview of my favorite technologies. Each played a vital role in my professional and personal growth. This is not comprehensive, rather an overview of those that have had the most impact.
                 </p>

@@ -27,7 +27,7 @@
 
         <div class="row mt-3">
             <div class="col-sm-12 text-black-50">
-                <h2 class="h3 animated-hover" id="projects" animation="animate__jackInTheBox">resume.projects (create)</h2>
+                <h1 class="h3 animated-hover" id="projects" animation="animate__jackInTheBox">resume.projects (create)</h1>
                 <p>
                     Always be creating and working towards a better version. Technology is always evolving, challenging
                     and we should have fun doing it. These are just a few of the passionate, growth-oriented and plain fun

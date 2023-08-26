@@ -27,7 +27,7 @@
 
         <div class="row mt-3">
             <div class="col-sm-12 text-black-50">
-                <h2 class="h3 animated-hover" id="education" animation="animate__jackInTheBox">resume.education (learn)</h2>
+                <h1 class="h3 animated-hover" id="education" animation="animate__jackInTheBox">resume.education (learn)</h1>
                 <p>
                     Being a student with an early itch for technology was a challenge. I’ve spent my career developing rich experience and interest understanding the fast paced evolution of technology.
                 </p>
