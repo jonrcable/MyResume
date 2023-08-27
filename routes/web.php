@@ -11,6 +11,10 @@
 |
 */
 
+Route::get('/sitemap.xml', function () {
+    return response()->view('sitemap')->header('Content-Type', 'text/xml');
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
