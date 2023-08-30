@@ -6,6 +6,8 @@
 
 @section('page-title', 'Welcome')
 
+@section('page-canonical', 'https://me.joncable.com')
+
 @section('welcome')
 
     <div class="container text-center">

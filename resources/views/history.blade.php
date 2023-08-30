@@ -6,6 +6,8 @@
 
 @section('page-title', 'History')
 
+@section('page-canonical', 'https://me.joncable.com/history')
+
 @section('page-crumbs')
 
     <span id="top"></span>

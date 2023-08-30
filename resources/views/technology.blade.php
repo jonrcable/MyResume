@@ -6,6 +6,8 @@
 
 @section('page-title', 'Technology')
 
+@section('page-canonical', 'https://me.joncable.com/technology')
+
 @section('page-crumbs')
 
     <span id="top"></span>
