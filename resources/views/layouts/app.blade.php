@@ -22,9 +22,6 @@
     <!-- Page Canonical -->
     <link rel="canonical" href="@yield('page-canonical')" />
 
-    <!-- Google ReCaptcha -->
-    <script src="https://www.google.com/recaptcha/api.js?&render=explicit" async defer></script>
-
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ config('app.GA4') }}"></script>
     <script>
