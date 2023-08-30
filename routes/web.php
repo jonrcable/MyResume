@@ -39,6 +39,8 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
+Route::redirect('/music', '/projects', 301);
+
 Auth::routes();
 
 Route::post('/incoming', 'ContactFormController@submit')->name('incoming');
